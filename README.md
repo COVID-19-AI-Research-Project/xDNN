@@ -18,6 +18,7 @@
     - [Matlab](#matlab)
     - [Python](#python)
 - [UI (HIAS)](#ui-hias)
+- [Attribution](#attribution)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -54,7 +55,7 @@ The programs serve a local API endpoint allowing devices and applications on the
 
 &nbsp;
 
-# UI HIAS
+# UI (HIAS)
 
 &nbsp;
 
