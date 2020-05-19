@@ -9,7 +9,8 @@
 # Table Of Contents
 
 - [Introduction](#introduction)
-- [xDNN](#xdnn)
+- [Lira](#lira)
+    - [xDNN](#xdnn)
 - [Projects](#projects)
     - [Matlab](#matlab)
     - [Python](#python)
@@ -23,15 +24,20 @@
 &nbsp;
 
 # Introduction
-The COVID-19 xDNN Classifiers are based on the work of our collaborators, Professor Plamen Angelov from Lancaster University/Centre Director @ Lira, & Eduardo Soares PhD. This repository provides a Matlab and a Python implementation of their eXplainable DNN architecture, which make up part of the [HIAS Intelligent Network](https://github.com/LeukemiaAiResearch/HIAS/). 
+The COVID-19 xDNN Classifiers are based on the work of our collaborators, [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). This repository provides a Matlab and a Python implementation of their eXplainable DNN architecture. 
 
-The programs serve a local API endpoint allowing devices and applications on the network to communicate with the model and do real-time inference on the edge. IoT connectivity is provided by the local HIAS iotJumpWay broker and allows for device to device/application communication. 
+These projects show how eXplainable Deep Learning (xDNN), can be utilized on the edge, providing real-time predictions for medical support applications using intelligent networks. In this case, the projects make up part of the [HIAS Intelligent Network](https://github.com/LeukemiaAiResearch/HIAS/)
 
-To train and infer against the model, we have provided a integration with the HIAS UI.
+The programs serve a local API endpoint allowing devices and applications on the network to communicate with the model and do real-time inference on the edge. IoT connectivity is provided by the local HIAS iotJumpWay broker and allows for device to device/application communication. To infer against the model, we have provided integration with the HIAS UI.
 
 &nbsp;
 
-# xDNN
+# Lira
+>"Lancaster Intelligent, Robotic and Autonomous systems (LIRA) Research Centre was set up in early 2018 with the aim to bring together the diverse research excellence and expertise in the areas of Intelligent, Robotic and Autonomous Systems (IRAS). Its core is formed by 30 academics from a range of departments across different Faculties and can be seen here. LIRA is multi-disciplinary by design. It covers aspects as diverse as engineering, computing, psychology, management, etc." 
+
+[Source](https://www.lancaster.ac.uk/lira/)
+
+## xDNN
 
 &nbsp;
 
