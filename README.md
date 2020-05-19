@@ -80,6 +80,9 @@ In this project we use Python 3/Tensorflow to replicate the xDNN architecture an
 
 # UI (HIAS)
 
+[![HIAS](Media/Images/HIAS.jpg)](https://github.com/LeukemiaAiResearch/HIAS)
+The HIAS UI integration allows you to send images to the local API endpoint and classify whether an image is COVID-19 positive or negative.
+
 &nbsp;
 
 # Attribution
