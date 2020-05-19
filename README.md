@@ -28,7 +28,7 @@
 &nbsp;
 
 # Introduction
-The COVID-19 xDNN Classifiers are based on the work of our collaborators, Plamenlancaster: [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). This repository provides a Matlab and a Python implementation of their eXplainable DNN architecture. 
+The COVID-19 xDNN Classifiers are based on the work of our collaborators, Plamenlancaster: [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). This repository provides a Matlab and Python implementation of their eXplainable DNN architecture. 
 
 These projects show how eXplainable Deep Learning (xDNN), can be utilized on the edge, providing real-time predictions for medical support applications using intelligent networks. In this case, the projects make up part of the [HIAS Intelligent Network](https://github.com/LeukemiaAiResearch/HIAS/)
 
@@ -60,8 +60,21 @@ The programs serve a local API endpoint allowing devices and applications on the
 &nbsp;
 
 # Projects
+This repository provides a Matlab and Python implementation of Plamenlancaster's eXplainable DNN architecture. 
+
 ## Matlab
+The COVID-19 xDNN Matlab Classifier is based on the architecture proposed in [SARS-CoV-2 CT-scan dataset: A large dataset of real patients CT scans for SARS-CoV-2 identification](https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v3) by Eduardo Soares, Plamen Angelov, Sarah Biaso, Michele Higa Froes, Daniel Kanda Abe. 
+
+In this project we use Matlab 2017a to replicate the xDNN architecture and provide a locally hosted server allowing inference on the edge.
+
+- Project Link: [COVID-19 xDNN Matlab Classifier](Projects/Matlab)
+
 ## Python
+The COVID-19 xDNN Python Classifier is based on the architecture proposed in [SARS-CoV-2 CT-scan dataset: A large dataset of real patients CT scans for SARS-CoV-2 identification](https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v3) by Eduardo Soares, Plamen Angelov, Sarah Biaso, Michele Higa Froes, Daniel Kanda Abe. 
+
+In this project we use Python 3/Tensorflow to replicate the xDNN architecture and provide a locally hosted server allowing inference on the edge. 
+
+- Project Link: [COVID-19 xDNN Python Classifier](Projects/Python)
 
 &nbsp;
 
