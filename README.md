@@ -11,7 +11,7 @@
 - [Introduction](#introduction)
 - [Lira](#lira)
     - [xDNN](#xdnn)
-        - [xDNN](#paper)
+        - [Paper](#paper)
         - [Code](#code)
         - [Data](#data)
 - [Projects](#projects)
