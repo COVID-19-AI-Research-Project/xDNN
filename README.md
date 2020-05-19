@@ -28,7 +28,7 @@
 &nbsp;
 
 # Introduction
-The COVID-19 xDNN Classifiers are based on the work of our collaborators, [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). This repository provides a Matlab and a Python implementation of their eXplainable DNN architecture. 
+The COVID-19 xDNN Classifiers are based on the work of our collaborators, Plamenlancaster: [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). This repository provides a Matlab and a Python implementation of their eXplainable DNN architecture. 
 
 These projects show how eXplainable Deep Learning (xDNN), can be utilized on the edge, providing real-time predictions for medical support applications using intelligent networks. In this case, the projects make up part of the [HIAS Intelligent Network](https://github.com/LeukemiaAiResearch/HIAS/)
 
@@ -70,7 +70,7 @@ The programs serve a local API endpoint allowing devices and applications on the
 &nbsp;
 
 # Attribution
-These projects were made possible through our collaboration with [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). We would like to thank them for this opportunity to work on such an amazing project.
+These projects were made possible through our collaboration with Plamenlancaster: [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). We would like to thank them for this opportunity to work on such an amazing project.
 
 &nbsp;
 
