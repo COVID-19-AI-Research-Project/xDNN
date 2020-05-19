@@ -23,6 +23,11 @@
 &nbsp;
 
 # Introduction
+The COVID-19 xDNN Classifiers are based on the work of our collaborators, Professor Plamen Angelov from Lancaster University/Centre Director @ Lira, & Eduardo Soares PhD. This repository provides a Matlab and a Python implementation of their eXplainable DNN architecture, which make up part of the [HIAS Intelligent Network](https://github.com/LeukemiaAiResearch/HIAS/). 
+
+The programs serve a local API endpoint allowing devices and applications on the network to communicate with the model and do real-time inference on the edge. IoT connectivity is provided by the local HIAS iotJumpWay broker and allows for device to device/application communication. 
+
+To train and infer against the model, we have provided a integration with the HIAS UI.
 
 &nbsp;
 
