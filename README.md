@@ -11,10 +11,13 @@
 - [Introduction](#introduction)
 - [Lira](#lira)
     - [xDNN](#xdnn)
+        - [xDNN](#paper)
+        - [Code](#code)
+        - [Data](#data)
 - [Projects](#projects)
     - [Matlab](#matlab)
     - [Python](#python)
-- [xDNN UI (HIAS)](#xdnn-ui-hias)
+- [UI (HIAS)](#ui-hias)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -39,6 +42,10 @@ The programs serve a local API endpoint allowing devices and applications on the
 
 ## xDNN
 
+### Paper
+### Code
+### Data
+
 &nbsp;
 
 # Projects
@@ -47,13 +54,18 @@ The programs serve a local API endpoint allowing devices and applications on the
 
 &nbsp;
 
-# xDNN UI HIAS
+# UI HIAS
+
+&nbsp;
+
+# Attribution
+These projects were made possible through our collaboration with [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,  [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares). We would like to thank them for this opportunity to work on such an amazing project.
 
 &nbsp;
 
 # Contributing
 
-The Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
+Peter Moss COVID-19 AI Research Project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
 
 Please read the [CONTRIBUTING](CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
 
