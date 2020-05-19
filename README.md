@@ -39,13 +39,23 @@ The programs serve a local API endpoint allowing devices and applications on the
 # Lira
 >"Lancaster Intelligent, Robotic and Autonomous systems (LIRA) Research Centre was set up in early 2018 with the aim to bring together the diverse research excellence and expertise in the areas of Intelligent, Robotic and Autonomous Systems (IRAS). Its core is formed by 30 academics from a range of departments across different Faculties and can be seen here. LIRA is multi-disciplinary by design. It covers aspects as diverse as engineering, computing, psychology, management, etc." 
 
-[Source](https://www.lancaster.ac.uk/lira/)
+- [Source](https://www.lancaster.ac.uk/lira/)
 
 ## xDNN
 
+[![xDNN](Media/Images/explainable-dnn-architecture.jpg)](https://github.com/COVID-19-AI-Research-Project/xDNN)
+
+- [ELLIS Against COVID19 Youtube (Source)](https://www.youtube.com/watch?v=7RtDgGkxavc)
+- [Peter Moss COVID-19 AI Research Project Facebook Video](https://www.facebook.com/covid19airesearch/videos/271817930672659)
+
 ### Paper
+- [SARS-CoV-2 CT-scan dataset: A large dataset of real patients CT scans for SARS-CoV-2 identification](https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v3) - Eduardo Soares, Plamen Angelov, Sarah Biaso, Michele Higa Froes, Daniel Kanda Abe.
+
 ### Code
+- [Plamen-Eduardo / xDNN-SARS-CoV-2-CT-Scan](https://github.com/Plamen-Eduardo/xDNN-SARS-CoV-2-CT-Scan)
+
 ### Data
+- [SARS-CoV-2 CT-scan dataset: A large dataset of real patients CT scans for SARS-CoV-2 (COVID-19) identification](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
 
 &nbsp;
 
