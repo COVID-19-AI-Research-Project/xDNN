@@ -1,0 +1,29 @@
+{   "data": {
+        "allowed": [
+            ".png", ".jpeg", ".jpg"
+        ],
+        "batch": 8,
+        "channels": 3,
+        "dim": 224,
+        "rotations": 1,
+        "test_size": 0.3,
+        "train" : ["Model/Imds", "Model/Features"]
+    },
+    "model": {
+        "labels": [
+            0,
+            1
+        ],
+        "weights": "Model/Pretrained/Output1.mat"
+    },
+    "modes": [
+        "Classes/Server",
+        "DatasetAndFeaturesPreparation",
+        "PredictImage",
+        "TrainModel",
+    ],
+    "server": {
+        "ip": "127.0.0.1",
+        "port": 5000
+    }
+}
