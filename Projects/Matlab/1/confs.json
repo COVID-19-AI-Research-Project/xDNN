@@ -17,7 +17,7 @@
         "weights": "Model/Pretrained/Output1.mat"
     },
     "modes": [
-        "Classes/Server",
+        "Server",
         "DatasetAndFeaturesPreparation",
         "PredictImage",
         "TrainModel",
