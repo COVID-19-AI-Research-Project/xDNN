@@ -21,46 +21,48 @@ The data is available www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset.
 
 Go to the project file > select the MATLAB Folder
 
-[![MATLAB Folder](../1/Media/Images/README/image_01.jpg)]
+![MATLAB Folder](../1/Media/Images/README/image_01.jpg)
 
 
 Select the script folder and double click on it. The path should enter into the script
 
-[![MATLAB select folder](../1/Media/Images/README/image_02.jpg)]
+![MATLAB select folder](../1/Media/Images/README/image_02.jpg)
 
 You will see the scripts for xDNN files. Select the xDNN_SARS.m file and click on the run option.
-[![Script](../1/Media/Images/README/image_03.jpg)]
+
+![Script](../1/Media/Images/README/image_03.jpg)
 
 After running file, the command prompt will show the accurary result.
 
-[![Accuracy](../1/Media/Images/README/image_04.jpg)]
+![Accuracy](../1/Media/Images/README/image_04.jpg)
 
 The accuracy result are shown in the pie chart.
-[![Accuracy pi chart](../1/Media/Images/README/image_07.jpg)]
+
+![Accuracy pi chart](../1/Media/Images/README/image_07.jpg)
 
 The other parameters like recall, precision and F1 results are shown in the command prompt.
 
-[![Parameter Result](../1/Media/Images/README/image_05.jpg)]
+![Parameter Result](../1/Media/Images/README/image_05.jpg)
 
-likewise, the results are plotted into the bar for better understanding the results in visual manner.
+Likewise, the results are plotted into the bar for better understanding the results in visual manner.
 
-[![Parameter Result Bar](../1/Media/Images/README/image_08.jpg)]
+![Parameter Result Bar](../1/Media/Images/README/image_08.jpg)
 
-the AUC curve has shown the performance measurement for classification of COVID and Non-COVID images at various thresholds settings. The best results are 97.36%.
+The AUC curve has shown the performance measurement for classification of COVID and Non-COVID images at various thresholds settings. The best results are 97.36%.
 
-[![AUC](../1/Media/Images/README/image_06.jpg)]
+![AUC](../1/Media/Images/README/image_06.jpg)
 
 The xDNN model performances are shown in the graph.
 
-[![AUC Graph](../1/Media/Images/README/image_09.jpg)]
+![AUC Graph](../1/Media/Images/README/image_09.jpg)
 
 The COVID and Non-COVID classes which are trained in the xDNN model are shown the results in classification truth table. This shows the classification are well accurate and can be implemented for classifying patient images. (This can be analytical)
 
-[![Confusion Matrix](../1/Media/Images/README/image_10.jpg)]
+![Confusion Matrix](../1/Media/Images/README/image_10.jpg)
 
 
-```
-Research cite:
+
+## Research cite:
 
 Angelov, P., & Soares, E. (2019). Towards Explainable Deep Neural Networks (xDNN). arXiv preprint arXiv:1912.02523.
 
@@ -68,4 +70,3 @@ Angelov, Plamen, and Eduardo Almeida Soares. "EXPLAINABLE-BY-DESIGN APPROACH FOR
 
 Soares, Eduardo, Angelov, Plamen, Biaso, Sarah, Higa Froes, Michele, and Kanda Abe, Daniel. "SARS-CoV-2 CT-scan dataset: A large dataset of real patients CT scans for SARS-CoV-2 identification." medRxiv (2020). doi: https://doi.org/10.1101/2020.04.24.20078584.
 Link: https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v2
-```
