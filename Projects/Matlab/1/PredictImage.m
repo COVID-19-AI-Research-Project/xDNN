@@ -1,3 +1,22 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%                                      PredictImage File
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Project Name:  Peter Moss COVID-19 AI Research Project
+% Repository:    COVID-19 AI Classification
+% Project title: COVID-19 Pneumonia Detection/Early Detection
+% Author 1:      Aniruddh Sharma
+% Author 2:      Nitin Mane
+% Title:         Testing Function for Image
+% Description:   Tests the PNG Image for a given path and return the integers 0 and 1 for Normal and
+%                COVID-19 CT Scans
+% License:       MIT License
+% Last Modified: 2020-07-30
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function image_file = PredictImage(file)
     try
         imds_predict  = imageDatastore(fullfile(file), ...

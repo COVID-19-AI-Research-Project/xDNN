@@ -1,3 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%                                      DatasetAndFeaturesPreparation File
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Project Name:  Peter Moss COVID-19 AI Research Project
+% Repository:    COVID-19 AI Classification
+% Project title: COVID-19 Pneumonia Detection/Early Detection
+% Author 1:      Aniruddh Sharma
+% Author 2:      Nitin Mane
+% Title:         For Preparing New Dataset and Features
+% Description:   Prepare the IMDS and Feature MAT files for given Dataset
+%
+% License:       MIT License
+% Last Modified: 2020-07-30
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 clc
 clear all
 

@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%                                      TrainModel File 
+%                                      TrainModel File
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -16,7 +16,7 @@
 % Last Modified: 2020-07-30
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Close all and clear 
+%% Close all and clear
 close all;
 clc;
 
@@ -51,10 +51,10 @@ Mode='Validation';
 %% Displaying and plotting results
 disp('Results: ')
 Acset = Output2.ClasAcc;
-Accuracy = Acset * 100 
-loss = 100 - Accuracy; 
-% 
-piResult = [Accuracy, loss]; 
+Accuracy = Acset * 100
+loss = 100 - Accuracy;
+%
+piResult = [Accuracy, loss];
 figure (1)
 pie(piResult,{'Accuracy','loss'});
 labels = {'Accuracy','loss'};
@@ -64,7 +64,7 @@ precision = Output2.ConfMat(1,1) / (Output2.ConfMat(1,1) + Output2.ConfMat(2,1))
 recall = Output2.ConfMat(1,1) / (Output2.ConfMat(1,1) + Output2.ConfMat(1,2))
 F1 = (2 * precision * recall) / (precision + recall)
 
-% plotting graph 
+% plotting graph
 MatSet = categorical({'Precision', 'recall', 'F1'});
 MatSet = reordercats(MatSet,{'Precision', 'recall', 'F1'});
 MatResult = [precision, recall, F1];
@@ -72,13 +72,13 @@ figure (2)
 bar(MatSet,MatResult);
 
 
-[X,Y,T,AUC] = perfcurve(Input2.Labels,Output2.EstLabs,2); 
+[X,Y,T,AUC] = perfcurve(Input2.Labels,Output2.EstLabs,2);
 AUC
 
 % Plot the AUC model
 figure(3)
 plot(X,Y,'LineWidth',3)
-xlabel('False positive rate') 
+xlabel('False positive rate')
 ylabel('True positive rate')
 title('ROC for Classification by xDNN')
 
