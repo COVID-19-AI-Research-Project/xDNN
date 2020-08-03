@@ -1,6 +1,6 @@
 # Peter Moss COVID-19 AI Research Project
 ## COVID-19 xDNN Classifiers
-[![xDNN](./Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN)
+[![xDNN](../../../../Media/Images/README/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN)
 
 [![VERSION](https://img.shields.io/badge/VERSION-0.0.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.0.0) [![DEV BRANCH](https://img.shields.io/badge/DEV%20BRANCH-0.1.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.1.0) [![Issues Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md) [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
 
@@ -21,42 +21,42 @@ The data is available www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset.
 
 Go to the project file > select the MATLAB Folder
 
-[![MATLAB Folder](./Media/Images/project_01/image_01.jpg)]
+[![MATLAB Folder](../../../../Media/Images/project_01/image_01.jpg)]
 
 
 Select the script folder and double click on it. The path should enter into the script
 
-[![MATLAB select folder](./Media/Images/project_01/image_02.jpg)]
+[![MATLAB select folder](../../../../Media/Images/project_01/image_02.jpg)]
 
 You will see the scripts for xDNN files. Select the xDNN_SARS.m file and click on the run option.
-[![Script](./Media/Images/project_01/image_03.jpg)]
+[![Script](../../../../Media/Images/project_01/image_03.jpg)]
 
 After running file, the command prompt will show the accurary result.
 
-[![Accuracy](./Media/Images/project_01/image_04.jpg)]
+[![Accuracy](../../../../Media/Images/project_01/image_04.jpg)]
 
 The accuracy result are shown in the pie chart.
-[![Accuracy pi chart](./Media/Images/project_01/image_07.jpg)]
+[![Accuracy pi chart](../../../../Media/Images/project_01/image_07.jpg)]
 
 The other parameters like recall, precision and F1 results are shown in the command prompt.
 
-[![Parameter Result](./Media/Images/project_01/image_05.jpg)]
+[![Parameter Result](../../../../Media/Images/project_01/image_05.jpg)]
 
 likewise, the results are plotted into the bar for better understanding the results in visual manner.
 
-[![Parameter Result Bar](./Media/Images/project_01/image_08.jpg)]
+[![Parameter Result Bar](../../../../Media/Images/project_01/image_08.jpg)]
 
 the AUC curve has shown the performance measurement for classification of COVID and Non-COVID images at various thresholds settings. The best results are 97.36%.
 
-[![AUC](../Media/Images/project_01/image_06.jpg)]
+[![AUC](../../../../Media/Images/project_01/image_06.jpg)]
 
 The xDNN model performances are shown in the graph.
 
-[![AUC Graph](./Media/Images/project_01/image_09.jpg)]
+[![AUC Graph](../../../../Media/Images/project_01/image_09.jpg)]
 
 The COVID and Non-COVID classes which are trained in the xDNN model are shown the results in classification truth table. This shows the classification are well accurate and can be implemented for classifying patient images. (This can be analytical)
 
-[![Confusion Matrix](./Media/Images/project_01/image_10.jpg)]
+[![Confusion Matrix](../../../../Media/Images/project_01/image_10.jpg)]
 
 
 ```
