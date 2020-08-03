@@ -27,7 +27,7 @@
   - [Contributors](#contributors)
 - [Versioning](#versioning)
 - [License](#license)
-- [Bugs/Issues](#bugs-issues)
+- [Bugs/Issues](#bugsissues)
 
 
 #  Introduction
