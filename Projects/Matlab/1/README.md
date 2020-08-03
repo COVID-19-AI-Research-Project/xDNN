@@ -223,7 +223,7 @@ https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v2
 
 The Peter Moss COVID-19 AI Research Project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
 
-Please read the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull
+Please read the [CONTRIBUTING](../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull
 requests. You will also find information about our code of conduct on this page.
 
 ## Contributors
@@ -251,4 +251,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](../../../
 # Bugs/Issues
 
 We use the [repo issues](../../../../../issues "repo issues") to track bugs and general requests related to using this project. See
-[CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
+[CONTRIBUTING](../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
