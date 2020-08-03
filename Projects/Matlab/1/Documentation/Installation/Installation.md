@@ -4,7 +4,7 @@
 
 ### COVID-19 xDNN Matlab Classifier
 
-[![GeniSysAI Server](../../../../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/aniruddh-1/xDNN/tree/master/Projects/Matlab/1)
+[![GeniSysAI Server](../../../../../Media/Images/covid-19-ai-research-xdnn.png)](../../)
 
 &nbsp;
 
