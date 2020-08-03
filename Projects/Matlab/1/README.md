@@ -21,42 +21,42 @@ The data is available www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset.
 
 Go to the project file > select the MATLAB Folder
 
-[![MATLAB Folder](../Media/Images/README/image_01.jpg)]
+[![MATLAB Folder](../1/Media/Images/README/image_01.jpg)]
 
 
 Select the script folder and double click on it. The path should enter into the script
 
-[![MATLAB select folder](../Media/Images/README/image_02.jpg)]
+[![MATLAB select folder](../1/Media/Images/README/image_02.jpg)]
 
 You will see the scripts for xDNN files. Select the xDNN_SARS.m file and click on the run option.
-[![Script](../Media/Images/README/image_03.jpg)]
+[![Script](../1/Media/Images/README/image_03.jpg)]
 
 After running file, the command prompt will show the accurary result.
 
-[![Accuracy](../Media/Images/README/image_04.jpg)]
+[![Accuracy](../1/Media/Images/README/image_04.jpg)]
 
 The accuracy result are shown in the pie chart.
-[![Accuracy pi chart](../Media/Images/README/image_07.jpg)]
+[![Accuracy pi chart](../1/Media/Images/README/image_07.jpg)]
 
 The other parameters like recall, precision and F1 results are shown in the command prompt.
 
-[![Parameter Result](../Media/Images/README/image_05.jpg)]
+[![Parameter Result](../1/Media/Images/README/image_05.jpg)]
 
 likewise, the results are plotted into the bar for better understanding the results in visual manner.
 
-[![Parameter Result Bar](../Media/Images/README/image_08.jpg)]
+[![Parameter Result Bar](../1/Media/Images/README/image_08.jpg)]
 
 the AUC curve has shown the performance measurement for classification of COVID and Non-COVID images at various thresholds settings. The best results are 97.36%.
 
-[![AUC](../Media/Images/README/image_06.jpg)]
+[![AUC](../1/Media/Images/README/image_06.jpg)]
 
 The xDNN model performances are shown in the graph.
 
-[![AUC Graph](../Media/Images/README/image_09.jpg)]
+[![AUC Graph](../1/Media/Images/README/image_09.jpg)]
 
 The COVID and Non-COVID classes which are trained in the xDNN model are shown the results in classification truth table. This shows the classification are well accurate and can be implemented for classifying patient images. (This can be analytical)
 
-[![Confusion Matrix](../Media/Images/README/image_10.jpg)]
+[![Confusion Matrix](../1/Media/Images/README/image_10.jpg)]
 
 
 ```
