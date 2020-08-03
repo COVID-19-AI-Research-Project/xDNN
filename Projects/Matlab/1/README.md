@@ -34,16 +34,15 @@ Recent findings have observed imaging patterns on computed tomography (CT) for p
 
 In this research, we have used a public available [SARS-COV-2 Ct-Scan Dataset](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset),
 containing 1252 CT scans that are positive for SARS-CoV-2 infection (COVID-19) and 1230 CT scans for patients non-infected by SARS-CoV-2.
-This dataset of CT scans for SARS-CoV-2 (COVID-19) identification is created by our collaborators, Plamenlancaster: [Professor Plamen Angelov]
-(https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/ Centre Director @ [Lira](https://
-www.lancaster.ac.uk/lira/), & his researcher, [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares).
+This dataset of CT scans for SARS-CoV-2 (COVID-19) identification is created by our collaborators, Plamenlancaster:
+[Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/
+Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,
+[Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares).
 
 These data have been collected from real patients in hospitals from Sao Paulo, Brazil.
 
 The aim of this dataset is to encourage the research and development of artificial intelligent methods which are able to identify if a person is is infected by SARS-CoV-2 through the analysis of his/her CT scans.
 As baseline result for this dataset we used an eXplainable Deep Learning approach (xDNN) which we could achieve an F1 score of **0.9672** which is very promising.
-After going through the [Installation](../Documentation/Installation/Installation.md), follow the below steps to Train the xDNN Model and use it to test or predict the
-CT Scan for detection of COVID-19.
 
 &nbsp;
 
@@ -149,7 +148,7 @@ _Fig 4. Confusion Matrix_
 
 The Matlab file [DatasetAndFeaturesPreparation.m](../1/DatasetAndFeaturesPreparation.m) can be used to make the IMDS and Features MAT files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
-the above script save the generated imdsTrain, imdsValidation mat files in [**IMDS**](../1/Model/IMDS) and featuresTrain, featuresTest in
+the above script save the generated imdsTrain, imdsValidation mat files in [**Imds**](../1/Model/Imds) and featuresTrain, featuresTest in
 [**Features**](../1/Model/Features) Folder.
 
 &nbsp;
@@ -220,7 +219,7 @@ https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v2
 
 The Peter Moss COVID-19 AI Research Project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
 
-Please read the [CONTRIBUTING](../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull
+Please read the [CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull
 requests. You will also find information about our code of conduct on this page.
 
 ## Contributors
@@ -228,24 +227,24 @@ requests. You will also find information about our code of conduct on this page.
 - [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") -
 [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") R&D Junior, Ahmedabad, Gujarat, India
 
-- [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Peter Moss Leukemia AI Research]
-(https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") AI R&D, Aurangabad, India
+- [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research")
+AI R&D, Aurangabad, India
 
 &nbsp;
 
 # Versioning
 
-We use SemVer for versioning. For the versions available, see [Releases](../../releases "Releases").
+We use SemVer for versioning. For the versions available, see [Releases](../../../../releases "Releases").
 
 &nbsp;
 
 # License
 
-This project is licensed under the **MIT License** - see the [LICENSE](../../LICENSE "LICENSE") file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](../../../../LICENSE "LICENSE") file for details.
 
 &nbsp;
 
 # Bugs/Issues
 
-We use the [repo issues](../../issues "repo issues") to track bugs and general requests related to using this project. See
-[CONTRIBUTING](../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
+We use the [repo issues](../../../../issues "repo issues") to track bugs and general requests related to using this project. See
+[CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
