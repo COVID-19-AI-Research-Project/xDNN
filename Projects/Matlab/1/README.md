@@ -1,5 +1,9 @@
 # Peter Moss COVID-19 AI Research Project
-## COVID-19 xDNN Classifiers
+
+## COVID-19 xDNN
+
+### COVID-19 xDNN Matlab Classifier
+
 [![xDNN](../../../Media/Images/covid-19-ai-research-xdnn.png)]()
 
 [![VERSION](https://img.shields.io/badge/VERSION-0.0.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.0.0) [![DEV BRANCH](https://img.shields.io/badge/DEV%20BRANCH-0.1.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.1.0) [![Issues Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md) [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
@@ -57,7 +61,7 @@ certain types of cancer and COVID-19. I am not a doctor, medical or cancer/COVID
 
 # Installation
 
-Please follow the [Installation Guide](../Documentation/Installation/Installation.md) to install COVID-19 xDNN Matlab Classifier.
+Please follow the [Installation Guide](../1/Documentation/Installation/Installation.md) to install COVID-19 xDNN Matlab Classifier.
 
 # Train
 
@@ -219,32 +223,32 @@ https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v2
 
 The Peter Moss COVID-19 AI Research Project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
 
-Please read the [CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull
+Please read the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull
 requests. You will also find information about our code of conduct on this page.
 
 ## Contributors
 
 - [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") -
-[Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") R&D Junior, Ahmedabad, Gujarat, India
+[Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") R&D Junior, Ahmedabad, Gujarat, India.
 
 - [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research")
-AI R&D, Aurangabad, India
+AI R&D, Aurangabad, India.
 
 &nbsp;
 
 # Versioning
 
-We use SemVer for versioning. For the versions available, see [Releases](../../../../releases "Releases").
+We use SemVer for versioning. For the versions available, see [Releases](../../../../../releases "Releases").
 
 &nbsp;
 
 # License
 
-This project is licensed under the **MIT License** - see the [LICENSE](../../../../LICENSE "LICENSE") file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](../../../../../LICENSE "LICENSE") file for details.
 
 &nbsp;
 
 # Bugs/Issues
 
-We use the [repo issues](../../../../issues "repo issues") to track bugs and general requests related to using this project. See
-[CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
+We use the [repo issues](../../../../../issues "repo issues") to track bugs and general requests related to using this project. See
+[CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
