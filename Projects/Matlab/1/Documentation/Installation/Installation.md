@@ -264,7 +264,7 @@ Now continue with the [COVID-19 xDNN](../../README.md "COVID-19 xDNN") tutorial.
 
 # Versioning
 
-You use SemVer for versioning. For the versions available, see [Releases](../../releases "Releases").
+You use SemVer for versioning. For the versions available, see [Releases](../../../../../../../releases "Releases").
 
 &nbsp;
 
