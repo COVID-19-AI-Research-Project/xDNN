@@ -22,7 +22,7 @@ clc;
 
 %% Data input and Training
 
-load ./Model/IMDS/imdsTrain
+load ./Model/Imds/imdsTrain
 Label =grp2idx(imdsTrain.Labels);
 load ./Model/Features/featuresTrain
 
