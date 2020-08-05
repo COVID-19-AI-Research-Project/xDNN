@@ -160,7 +160,7 @@ the above script save the generated imdsTrain, imdsValidation mat files in [**Im
 # Real World Testing
 
 For testing the model and getting the results on random CT Lung Scan Images, we will upload an Image on a webpage for the given default IP Address and
-Port in [config.json](../1/config.json#L25), then it will provide the result for the given Image.The webpage interface to upload and predict images is
+Port in [config.json](../1/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
 one using Flask API and we will use python script [Server.py](../1/Server.py), which will call Flask API to interact with the webpage and
 call the [PredictImage.m](../1/PredictImage.m) matlab function through MATLAB Engine API Library which uses the pretrained model to classify the
 uploaded Image.
@@ -186,7 +186,7 @@ The Script will start running and initiate both MATLAB Engine API and Flask API.
 
 ```
 
-Now go to your default browser and search for given HTTP address: http://127.0.0.1:5000/. You will see a web page as shown below:
+Now go to your default browser and search for given HTTP address. You will see a web page as shown below:
 
 ![WebPage1](../1/Media/Images/README/WebPage1.png)
 
