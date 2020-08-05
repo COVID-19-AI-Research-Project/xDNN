@@ -32,11 +32,12 @@ $(document).ready(function () {
         $(this).hide();
         $('.loader').show();
 
-        // Make prediction by calling api /predict
+        // Make prediction by calling api /inference
         $.ajax({
             type: 'POST',
             url: '/predict',
             data: form_data,
+
             contentType: false,
             cache: false,
             processData: false,
