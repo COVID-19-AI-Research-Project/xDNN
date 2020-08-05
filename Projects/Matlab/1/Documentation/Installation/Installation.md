@@ -197,6 +197,8 @@ pip3 install flask
 pip3 install gevent
 pip3 install numpy
 pip3 install werkzeug
+pip3 install logging
+pip3 install jsonpickle
 ```
 
 #### For installing the Matlab Engine API to run matlab functions from python scripts, choose one of the following step:
@@ -237,36 +239,11 @@ eng = matlab.engine.start_matlab()
 
 You will find the configuration file in the project 2 root directory.
 ```
-{   "data": {
-        "allowed": [
-            ".png", ".jpeg", ".jpg"
-        ],
-        "batch": 8,
-        "channels": 3,
-        "dim": 224,
-        "rotations": 1,
-        "test_size": 0.3,
-        "train" : ["Model/Imds", "Model/Features"]
-    },
-    "model": {
-        "labels": [
-            0,
-            1
-        ],
-        "weights": "Model/Pretrained/Output1.mat"
-    },
-    "modes": [
-        "Server",
-        "DatasetAndFeaturesPreparation",
-        "PredictImage",
-        "TrainModel",
-    ],
-    "server": {
+{   "server": {
         "ip": "127.0.0.1",
         "port": 5000
     }
 }
-
 ```
 &nbsp;
 
