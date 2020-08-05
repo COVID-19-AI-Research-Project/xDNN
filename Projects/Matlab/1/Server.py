@@ -11,7 +11,6 @@
 # Last Modified: 2020-06-09
 #
 ############################################################################################
-from __future__ import division, print_function
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
@@ -19,23 +18,42 @@ from PIL import Image
 
 # coding=utf-8
 import sys, os, glob, re, matlab.engine
-import numpy as np
-categories = ["COVID-19 Scan","Normal Scan"]
+import logging, json
+
+
+#creating logger file
+logger = logging.getLogger('Server.py')
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler = logging.FileHandler('./Logs/allLogs.log')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+#Loads the program configuration
+with open('config.json') as confs:
+    confs = json.loads(confs.read())
+
+
+categories = ["Normal Scan","COVID-19 Scan"]
 
 def predict_image(file_path):
     eng = matlab.engine.start_matlab()
+    logger.info("Matlab engine started, uploading Image in PredictImage function.")
     label = int(eng.PredictImage(file_path, nargout = 1))
     eng.quit()
-    if label == 1:
-        return categories[0]
-    elif label == 0:
-        return categories[1]
+    try:
+        logger.info("The Uploaded CT Scan is {}".format(categories[label]))
+        return categories[label]
+    except:
+        logger.info("Unable to predict Image")
     return 'Cannot detect image file at given location: {}'.format(filepath)
 
 def make_empty_dir(dir_name):
     try:
         os.mkdir(dir_name)
+        logger.info("{} Directory created in Project Root Folder".format(dir_name))
     except :
+        logger.info("Unable to make {} Directory.".format(dir_name))
         pass
 
     for filename in os.listdir(dir_name):
@@ -53,6 +71,7 @@ def process_img(dir_name):
             img = Image.open(img_path).convert("RGB")
             new_img = img.save('{}{}{}{}'.format(dir_name, '/', img_name, '.png'), 'png')
             os.remove(img_path)
+    logger.info("Image File {} processed and Converted in RGB channel PNG format.".format(img))
 
 app = Flask(__name__)
 
@@ -66,6 +85,7 @@ def index():
 def upload():
     if request.method == 'POST':
         # Get the file from post request
+        logger.info('File upload request started.')
         f = request.files['file']
         dir_name = 'uploads'
         make_empty_dir(dir_name)
@@ -74,6 +94,7 @@ def upload():
         file_path = os.path.join(basepath, dir_name, secure_filename(f.filename))
         file_path = file_path.replace('\\','/')
         f.save(file_path)
+        logger.info("Image file {} successfully saved in {} folder".format(f, dir_name))
         process_img(dir_name)
         # Make prediction
         preds = predict_image(dir_name)
@@ -82,4 +103,4 @@ def upload():
     return None
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = confs["server"]["ip"], port= confs["server"]["port"], debug=True)
