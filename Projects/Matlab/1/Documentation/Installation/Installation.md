@@ -113,11 +113,11 @@ MATLAB-Trial-R2020a
 
 ![license page](../../Media/Images/Installation/matlab_04.jpg)
 
-5. In the trial section, it is notified with the trial license if using fist time.
+5. In the trial section, it is notified with the trial license if using first time.
 
 ![trial page](../../Media/Images/Installation/matlab_05.jpg)
 
-6. Click in the license section, a new window will open. Select the install and activate option.
+6. Click in the license section, a new window will open. Select the trial package of Deep Learning to Download.
 
 ![license selection page](../../Media/Images/Installation/matlab_06.jpg)
 
@@ -188,45 +188,26 @@ MATLAB-Trial-R2020a
 The following dependencies for Project will required to be installed as follows:
 
 ```
-pip3 install sys
-pip3 install os
-pip3 install glob
-pip3 install re
 pip3 install pillow
 pip3 install flask
 pip3 install gevent
 pip3 install numpy
 pip3 install werkzeug
-pip3 install logging
 pip3 install jsonpickle
 ```
 
-#### For installing the Matlab Engine API to run matlab functions from python scripts, choose one of the following step:
+#### For installing the Matlab Engine API:
+After Successfully installing python and its libraries, we will install Matlab Engine API to call matlab functions
+from python Scripts. The Matlabroot folder is generally found in Program Files Directory of C Drive(C:\Program Files\MATLAB\R2020a)
+in Windows, however the location can change as per preferred choice by user during installation.
 
-1. At a Windows operating system prompt —
+At a Windows operating system prompt —
 
 ```
-cd "matlabroot\extern\engines\python"
+cd "C:\Program Files\MATLAB\R2020a\extern\engines\python"
 python setup.py install
 ```
 
-You might need administrator privileges to execute these commands.
-
-2. At a macOS or Linux operating system prompt —
-
-```
-cd "matlabroot/extern/engines/python"
-python setup.py install
-```
-
-You might need administrator privileges to execute these commands.
-
-3. At the MATLAB command prompt —
-
-```
-cd (fullfile(matlabroot,'extern','engines','python'))
-system('python setup.py install')
-```
 
 After a successfull installation of MATLAB Engine API, start Python, import the module, and start the MATLAB engine:
 
