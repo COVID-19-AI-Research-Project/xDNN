@@ -165,7 +165,7 @@ one using Flask API and we will use python script [Server.py](../1/Server.py), w
 call the [PredictImage.m](../1/PredictImage.m) matlab function through MATLAB Engine API Library which uses the pretrained model to classify the
 uploaded Image.
 
-To test an Image, navigate to the project root and exectute the following command:
+To test an Image, navigate to the project root(../xDNN/Projects/Matlab/1/) and execute the following command in command prompt:
 
 ```
 python3 Server.py
