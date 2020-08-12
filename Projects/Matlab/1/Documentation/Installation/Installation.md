@@ -218,7 +218,7 @@ eng = matlab.engine.start_matlab()
 
 ## Configuration
 
-You will find the configuration file in the project 2 root directory.
+You will find the configuration file in the project 1 root directory.
 ```
 {   "server": {
         "ip": "127.0.0.1",
