@@ -1,10 +1,9 @@
 # Peter Moss COVID-19 AI Research Project
-
 ## COVID-19 xDNN
-
 ### COVID-19 xDNN Matlab Classifier
+#### Installation
 
-[![GeniSysAI Server](../../../../../Media/Images/covid-19-ai-research-xdnn.png)](../../)
+[![GeniSysAI Server](../../../../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/master/Projects/Matlab/1)
 
 &nbsp;
 
@@ -14,8 +13,14 @@
 - [Required Hardware](#required-hardware)
     - [System Configurations](#system-configurations)
 - [Prerequisites](#prerequisites)
+  - [MATLAB Software R2020a](#matlab-software-r2020a)
+  - [Python3](#python3)
+  - [Clone the Repository](#clone-the-repository)
+    - [Developer Forks](#developer-forks)
 - [Installation](#installation)
-        - [Steps for downloading the MATLAB Software :](#steps-for-downloading-the-matlab-software-)
+  - [Installing Matlab](#installing-matlab)
+  - [Installing the Matlab Engine API](#installing-the-matlab-engine-api)
+  - [Configuration](#configuration)
 - [Contributors](#contributors)
 - [Versioning](#versioning)
 - [License](#license)
@@ -26,17 +31,18 @@
 # Introduction
 The following guide will take you through setting up and installing the  [ COVID-19 xDNN Matlab Classifier](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/master/Projects/Matlab/1 " COVID-19 xDNN Matlab Classifier").
 
-
 &nbsp;
 
 # Required Hardware
 
-### System Configurations:
+## System Configurations
 
-1. Processor - i3, 4th GEN(min)
-2. Graphic Card - Geforce 920MX(min)
-3. RAM Card - 4 GB(min)
-4. Disk Space - 24 GB(min)
+In this project we used:
+
+- Processor - i3, 4th GEN(min)
+- Graphic Card - Geforce 920MX(min)
+- RAM Card - 4 GB(min)
+- Disk Space - 24 GB(min)
 
 &nbsp;
 
@@ -58,7 +64,7 @@ After downloading the package, follow the below Environment Setup and add the PA
 
 Clone the [COVID-19 xDNN](https://github.com/COVID-19-AI-Research-Project/xDNN " COVID-19 xDNN") repository from the [Peter Moss COVID-19 AI Research](https://github.com/COVID-19-AI-Research-Project "Peter Moss COVID-19 AI Research") Github Organization.
 
-To clone the repository and install the COVID-19 Tensorflow DenseNet Classifier, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
+To clone the repository and install this project, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
 
 ```
   $ git clone https://github.com/COVID-19-AI-Research-Project/xDNN.git
@@ -73,13 +79,12 @@ ls
 Using the ls command in your home directory should show you the following.
 
 ```
-COVID-19-AI-Research-Project
+XDNN
 ```
 
-Navigate to **COVID-19-AI-Research-Project/Projects/Matlab/1** directory, this is your project root directory for this tutorial.
+Navigate to **COVID-19-AI-Research-Project/XDNN/Projects/Matlab/1** directory, this is your project root directory for this tutorial.
 
 ### Developer Forks
-
 Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
 
 ```
@@ -88,14 +93,13 @@ Developers from the Github community that would like to contribute to the develo
 
 The **-b "0.2.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
 
-
 &nbsp;
 
 # Installation
 
 ## Installing Matlab
+Follow these steps to install the MATLAB 2020.
 
-#### Follow these steps to install the MATLAB 2020 in correct manner.
 1. Open browser and Type MATLAB in search bar or click on the link.
 MATLAB-Trial-R2020a
 
@@ -183,9 +187,8 @@ MATLAB-Trial-R2020a
 
 ![MATLAB Software GUI](../../Media/Images/Installation/matlab_22.jpg)
 
-
-## Manually Installing Required Python Libraries
-The following dependencies for Project will required to be installed as follows:
+## Installing Required Python Libraries
+The following dependencies are required to be installed:
 
 ```
 pip3 install pillow
@@ -196,10 +199,8 @@ pip3 install werkzeug
 pip3 install jsonpickle
 ```
 
-#### For installing the Matlab Engine API:
-After Successfully installing python and its libraries, we will install Matlab Engine API to call matlab functions
-from python Scripts. The Matlabroot folder is generally found in Program Files Directory of C Drive(C:\Program Files\MATLAB\R2020a)
-in Windows, however the location can change as per preferred choice by user during installation.
+## Installing the Matlab Engine API
+After Successfully installing python and its libraries, we will install Matlab Engine API to call matlab functions from python Scripts. The Matlabroot folder is generally found in Program Files Directory of C Drive(C:\Program Files\MATLAB\R2020a) in Windows, however the location can change as per preferred choice by user during installation.
 
 At a Windows operating system prompt —
 
@@ -207,7 +208,6 @@ At a Windows operating system prompt —
 cd "C:\Program Files\MATLAB\R2020a\extern\engines\python"
 python setup.py install
 ```
-
 
 After a successfull installation of MATLAB Engine API, start Python, import the module, and start the MATLAB engine:
 
@@ -226,24 +226,33 @@ You will find the configuration file in the project 1 root directory.
     }
 }
 ```
+
 &nbsp;
 
 # Continue
 
-Now continue with the [COVID-19 xDNN](../../README.md "COVID-19 xDNN") tutorial.
+Now continue with the [COVID-19 Matlab xDNN Project 1](../../ "COVID-19 Matlab xDNN Project 1") tutorial.
 
+&nbsp;
+
+# Contributing
+
+The Peter Moss COVID-19 AI Research Project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
+
+Please read the [CONTRIBUTING](../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull
+requests. You will also find information about our code of conduct on this page.
 
 ## Contributors
 
-- [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") - [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") R&D Junior, Ahmedabad, Gujarat, India
+- [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") - [Asociacion De Investigatcion En Inteligencia Artificial Para La Leucemia Peter Moss](https://www.leukemiaresearchassociation.ai "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") R&D Junior, Ahmedabad, Gujarat, India
 
-- [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") AI R&D, Aurangabad, India
+- [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Asociacion De Investigatcion En Inteligencia Artificial Para La Leucemia Peter Moss](https://www.leukemiaresearchassociation.ai "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") AI R&D, Aurangabad, India
 
 &nbsp;
 
 # Versioning
 
-You use SemVer for versioning. For the versions available, see [Releases](../../../../../../../releases "Releases").
+You use SemVer for versioning. For the versions available, see [Releases](../../../../../releases "Releases").
 
 &nbsp;
 
@@ -255,4 +264,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](../../../
 
 # Bugs/Issues
 
-We use the [repo issues](../../../../../../../issues "repo issues") to track bugs and general requests related to using this project. See [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
+We use the [repo issues](../../../../../issues "repo issues") to track bugs and general requests related to using this project. See [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
