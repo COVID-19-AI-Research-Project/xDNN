@@ -52,6 +52,8 @@ Please use this system responsibly.
 
 Please follow the [Installation Guide](Documentation/Installation/Installation.md) to install COVID-19 xDNN Matlab Classifier.
 
+&nbsp;
+
 # Train
 
 Assuming you have completed the installation guide, you can now begin training.
