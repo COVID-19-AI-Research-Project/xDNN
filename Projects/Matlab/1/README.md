@@ -1,6 +1,6 @@
 # Peter Moss COVID-19 AI Research Project
 ## COVID-19 xDNN
-### COVID-19 xDNN Matlab Classifier
+### COVID-19 xDNN Matlab Classifier Project 1
 
 [![COVID-19 xDNN Matlab Classifier](../../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/master/Projects/Matlab/1)
 
@@ -27,23 +27,24 @@
 
 
 #  Introduction
-In this research, we have used a public available [SARS-COV-2 Ct-Scan Dataset](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset),
+In this research, we have used Matlab and the publicly available [SARS-COV-2 Ct-Scan Dataset](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset),
 containing 1252 CT scans that are positive for SARS-CoV-2 infection (COVID-19) and 1230 CT scans for patients non-infected by SARS-CoV-2.
 This dataset of CT scans for SARS-CoV-2 (COVID-19) identification is created by our collaborators, Plamenlancaster:
 [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/
 Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,
 [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares).
 
-These data have been collected from real patients in hospitals from Sao Paulo, Brazil.
-
 &nbsp;
 
 # DISCLAIMER
 
-This project should be used for research purposes only. The purpose of the project is to show the potential of Artificial Intelligence for medical support
-systems such as diagnosis systems. Although the program is fairly accurate and shows good results both on paper and in real world testing, it is not meant
-to be an alternative to professional medical diagnosis. I am a self taught developer with some experience in using Artificial Intelligence for detecting
-certain types of cancer and COVID-19. I am not a doctor, medical or cancer/COVID-19 expert. Please use this system responsibly.
+This project should be used for research purposes only. The purpose of the project is to show the potential of Artificial Intelligence for medical support systems such as diagnosis systems.
+
+Although the program is very accurate and shows good results both on paper and in real world testing, it is not meant to be an alternative to professional medical diagnosis.
+
+Developers that have contributed to this repository have experience in using Artificial Intelligence for detecting certain types of cancer & COVID-19. They are not a doctors, medical, or COVID-19 experts.
+
+Please use this system responsibly.
 
 &nbsp;
 
