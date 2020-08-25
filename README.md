@@ -66,7 +66,7 @@ The COVID-19 xDNN Matlab Classifiers are based on the architecture proposed in [
 
 | Project  | Description  | Author(s)  |
 | --- | ---------------- | ---------------- |
-| [Project 1](Vision/UP2/NCS1/API "Project 1")   | In this research, we have used Matlab and the publicly available SARS-COV-2 Ct-Scan Dataset by our collaborators, Plamenlancaster: Professor Plamen Angelov from Lancaster University/ Centre Director @ Lira, & his researcher, Eduardo Soares PhD.  |  [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") & [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") |
+| [Project 1](Projects/Matlab/1 "Project 1")   | In this research, we have used Matlab and the publicly available SARS-COV-2 Ct-Scan Dataset by our collaborators, Plamenlancaster: Professor Plamen Angelov from Lancaster University/ Centre Director @ Lira, & his researcher, Eduardo Soares PhD.  |  [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") & [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") |
 
 ## Python
 The COVID-19 xDNN Python Classifiers are based on the architecture proposed in [SARS-CoV-2 CT-scan dataset: A large dataset of real patients CT scans for SARS-CoV-2 identification](https://www.medrxiv.org/content/10.1101/2020.04.24.20078584v3) by Eduardo Soares, Plamen Angelov, Sarah Biaso, Michele Higa Froes, Daniel Kanda Abe.
