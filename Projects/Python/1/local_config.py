@@ -1,5 +1,5 @@
-MODEL_FILE = 'gvt_model.h5'
-MODEL_DIR = 'model'
+MODEL_FILE = 'xdnn.py'
+MODEL_DIR = './'
 OUTPUT_DIR = 'static'
-CLASSES = ['Glass', 'Table']
+CLASSES = ['COVID', 'NON-COVID']
 SIZE = 224 # Image width and height
