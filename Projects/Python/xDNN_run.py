@@ -1,17 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Please cite:
+Angelov, P., & Soares, E. (2020). Towards explainable deep neural networks (xDNN). Neural Networks.
 
-############################################################################################
-#
-# Project:       Peter Moss COVID-19 AI Research Project
-# Repository:    COVID-19 AI Classification
-# Project:       COVID-19 CT Scan COVID Detection
-#
-# Author:        Nitin Mane
-# Title:         Predict CT Scan on Server
-# Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
-# License:       MIT License
-# Last Modified: 2021-01-20
-#
-############################################################################################
+"""
 
 ###############################################################################
 import pandas as pd
@@ -127,3 +120,4 @@ print('Cohens kappa: %f' % kappa)
 # confusion matrix
 matrix = confusion_matrix(y_test_labels , Output2['EstLabs'])
 print("Confusion Matrix: ",matrix)
+
