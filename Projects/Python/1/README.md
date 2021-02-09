@@ -77,7 +77,7 @@ TrainModel
 
 ## Training Results
 
-The trained model is processed in the workspace of the python IDE, this contains a Model file which is trained on 1637 images containing xDNN Parameters.
+The trained model is processed in the workspace of the python IDE, this contains a Model file which is trained on 1737 images containing xDNN Parameters.
  When the training finishes the model will show the results related to metrics and figures of merit.
 
 ```
@@ -187,24 +187,24 @@ C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\.libs\libopenblas.TX
 
 Now go to your default browser and search for given HTTP address. You will see a web page as shown below:
 
-![WebPage1](../1/Media/Images/Project_Images/Server_Start.png)
+![WebPage1](../1/Media/Project_Images/Server_Start.png)
 
 Go the browser and on the given HTTP address assigned you will be prompt to a webpage. 
 
-![WebPage2](../1/Media/Images/Project_Images/Webpage_image.png)
+![WebPage2](../1/Media/Project_Images/Webpage_image.png)
 
 Now Upload any JPG, JPEG or PNG CT Scan image file by clicking **Upload Image**. Keep in Mind that the Image file should have at atleast size of
  (224,224) image pixels. After Uploading Image, click on **Show Results**:
 
- ![WebPage2](../1/Media/Images/Project_Images/webpage_input.png)
+ ![WebPage2](../1/Media/Project_Images/webpage_input.png)
 
 The Web Page will provide a predict button to classify the image from the server. 
 
-![WebPage3](../1/Media/Images/Project_Images/webpage_predict.png)
+![WebPage3](../1/Media/Project_Images/webpage_predict.png)
 
 After Sometime it will give results for the uploaded Image as shown:
 
-![WebPage4](../1/Media/Images/Project_Images/webpage_covid.png)
+![WebPage4](../1/Media/Project_Images/webpage_covid.png)
 
 &nbsp;
 
