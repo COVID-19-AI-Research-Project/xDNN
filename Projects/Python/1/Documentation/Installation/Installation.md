@@ -35,11 +35,12 @@ data from the server or the machine. this method provides an edge computing devi
 
 Basic Computer Configuration:
 
-Processor    - Intel i3 or above 
-Ram          - 4 GB and above
-Harddisk     - 10 GB space
-Graphics Card - NVIDIA GTX1050
-
+\begin{itemize}
+ \Processor    - Intel i3 or above 
+ \Ram          - 4 GB and above
+ \Harddisk     - 10 GB space
+ \Graphics Card - NVIDIA GTX1050
+\end{itemize}
 
 &nbsp;
 
