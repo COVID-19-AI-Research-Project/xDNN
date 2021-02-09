@@ -50,7 +50,7 @@ The required operating system can be Windows, Linux or MacOS.
 The software required are as follows:
 1. [Anaconda IDE](https://www.anaconda.com/products/individual)
 2. [Tensorflow Library](https://www.tensorflow.org/install/)
-3. [PyTorch Libary[(https://pytorch.org/) (Optional)
+3. [PyTorch Libary](https://pytorch.org/) (Optional)
 4. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
  
 
@@ -80,7 +80,7 @@ After completing the process. Restart the computer and open Anaconda Navigator a
 In this techniques, we need to process the data for training and testing model. The data should be downloaded from the given [link](http://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset) 
 Extract the file and paste it in the (./Model/Data/) folder. 
 
-run 'Feature_Extraction_VGG16.py'(Feature_Extraction_VGG16.py) or 'Feature_Extraction_VGG16_PyTorch.py'(Feature_Extraction_VGG16_PyTorch.py) file in spyder 
+run `Feature_Extraction_VGG16.py`(Feature_Extraction_VGG16.py) or `Feature_Extraction_VGG16_PyTorch.py`(Feature_Extraction_VGG16_PyTorch.py) file in spyder 
 
 This will load the file and convert into the train and test feature file with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
 
