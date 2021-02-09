@@ -121,11 +121,11 @@ _Fig 1. Accuracy_
 
 ![Precision](../1/Media/Images/recall.png)
 
-_Fig 3. Precision, Recall and F1_
+_Fig 2. Precision, Recall and F1_
 
 ![Confusion Matrix](../1/Media/Images/confusion_matrix.png)
 
-_Fig 4. Confusion Matrix_
+_Fig 3. Confusion Matrix_
 
 ### Metrics Overview
 
@@ -182,7 +182,6 @@ C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\.libs\libopenblas.TX
  * Debugger is active!
  * Debugger PIN: 131-166-024
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-
 ```
 
 Now go to your default browser and search for given HTTP address. You will see a web page as shown below:
