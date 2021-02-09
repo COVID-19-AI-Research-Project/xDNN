@@ -1,6 +1,6 @@
 # Peter Moss COVID-19 AI Research Project
 ## COVID-19 xDNN Python Classifier
-[![GeniSysAI Server](../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN)
+[![GeniSysAI Server](../../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN)
 
 &nbsp;
 
@@ -35,12 +35,10 @@ data from the server or the machine. this method provides an edge computing devi
 
 Basic Computer Configuration:
 
-\begin{itemize}
- \Processor    - Intel i3 or above 
- \Ram          - 4 GB and above
- \Harddisk     - 10 GB space
- \Graphics Card - NVIDIA GTX1050
-\end{itemize}
+1. Processor    - Intel i3 or above 
+2. Ram          - 4 GB and above
+3. Harddisk     - 10 GB space
+4. Graphics Card - NVIDIA GTX1050
 
 &nbsp;
 
