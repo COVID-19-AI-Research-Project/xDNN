@@ -20,6 +20,7 @@ from sklearn.metrics import cohen_kappa_score
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_curve, auc
+import scikitplot as skplt
 import matplotlib.pyplot as plt
 import time
 
@@ -122,4 +123,31 @@ print('Cohens kappa: %f' % kappa)
 matrix = confusion_matrix(y_test_labels , Output2['EstLabs'])
 print("Confusion Matrix: ",matrix)
 
+# Plot the graphs 
 
+# Pie chart, where the slices will be ordered and plotted counter-clockwise:
+labels = 'COVID', 'Non-COVID'
+inaccurate = 1- accuracy 
+sizes = [accuracy, inaccurate ]
+explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
+
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+plt.show()
+
+# Recall, Precision and F1
+import matplotlib.pyplot as plt
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+name = ['precision', 'Recall', 'F1 score']
+values = [precision,recall,f1]
+ax.bar(names,values)
+plt.show()
+
+# Confusion Matrix 
+#confusion matrix
+skplt.metrics.plot_confusion_matrix(y_test_labels , Output2['EstLabs'], normalize=True)
+plt.show()
