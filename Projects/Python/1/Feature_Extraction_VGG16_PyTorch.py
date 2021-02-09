@@ -115,7 +115,7 @@ data_df_y_test = pd.DataFrame(y_test)
 print(data_df_X_train)
 
 # Save file as .csv
-data_df_X_train.to_csv('data_df_X_train_lite.csv',header=False,index=False)
-data_df_y_train.to_csv('data_df_y_train_lite.csv',header=False,index=False)
-data_df_X_test.to_csv('data_df_X_test_lite.csv',header=False,index=False)
-data_df_y_test.to_csv('data_df_y_test_lite.csv',header=False,index=False)
+data_df_X_train.to_csv('./Model/Features/data_df_X_train_lite.csv',header=False,index=False)
+data_df_y_train.to_csv('./Model/Features/data_df_y_train_lite.csv',header=False,index=False)
+data_df_X_test.to_csv('./Model/Features/data_df_X_test_lite.csv',header=False,index=False)
+data_df_y_test.to_csv('./Model/Features/data_df_y_test_lite.csv',header=False,index=False)
