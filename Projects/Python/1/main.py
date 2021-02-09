@@ -4,6 +4,7 @@
 Please cite:
 Angelov, P., & Soares, E. (2020). Towards explainable deep neural networks (xDNN). Neural Networks.
 
+Modified by Nitin Mane
 """
 
 ###############################################################################
@@ -26,10 +27,10 @@ import time
 
 # Load the files, including features, images and labels.    
 
-X_train_file_path = r'data_df_X_train_lite.csv'
-y_train_file_path = r'data_df_y_train_lite.csv'
-X_test_file_path = r'data_df_X_test_lite.csv'
-y_test_file_path = r'data_df_y_test_lite.csv'
+X_train_file_path = r'./Model/Features/data_df_X_train_lite.csv'
+y_train_file_path = r'./Model/Features/data_df_y_train_lite.csv'
+X_test_file_path = r'./Model/Features/data_df_X_test_lite.csv'
+y_test_file_path = r'./Model/Features/data_df_y_test_lite.csv'
 
 X_train = genfromtxt(X_train_file_path, delimiter=',')
 y_train = pd.read_csv(y_train_file_path, delimiter=';',header=None)
