@@ -61,7 +61,7 @@ certain types of cancer and COVID-19. I am not a doctor, medical or cancer/COVID
 
 # Installation
 
-Please follow the [Installation Guide](../1/Documentation/Installation/Installation.md) to install COVID-19 xDNN Matlab Classifier.
+Please follow the [Installation Guide](../1/Documentation/Installation/Installation.md) to install COVID-19 xDNN Python Classifier.
 
 # Train
 
@@ -69,7 +69,7 @@ Assuming you have completed the installation guide, you can now begin training.
 
 ## Start Training
 
-Open Matlab2020 and navigate to the project root directory and execute the following command:
+Open Python IDE or Anaconda IDE (Command prompt or spyder) and navigate to the project root directory and execute the following command:
 
 ```
 TrainModel
@@ -77,57 +77,53 @@ TrainModel
 
 ## Training Results
 
-The trained model files can be found in **Model/Pretrained** location, this contains a MAT file which is trained on 1737 images containing xDNN Parameters.
+The trained model is processed in the workspace of the python IDE, this contains a Model file which is trained on 1637 images containing xDNN Parameters.
  When the training finishes the model will show the results related to metrics and figures of merit.
 
 ```
-Elapsed time is 9.566493 seconds.
+Elapsed time is 68.74 seconds.
 Results:
 
 Accuracy =
 
-   96.6443
+   0.967807
 
 
 precision =
 
-    0.9535
+    0.967807
 
 
 recall =
 
-    0.9814
+    0.967807
 
 
 F1 =
 
-    0.9672
+    0.967807
 
 
 AUC =
 
-    0.9663
+    0.935607
 
 
 Confusion_Matrix =
 
-   369     7
-    18   351
+   247     2
+    14   234
 ```
 
-![Accuracy](../1/Media/Images/README/Accuracy.jpg)
+![Accuracy](../1/Media/Images/Accuracy_chart.png)
 
 _Fig 1. Accuracy_
 
-![ROC](../1/Media/Images/README/ROC.jpg)
-
-_Fig 2. ROC/AUC_
-
-![Precision](../1/Media/Images/README/PrecisionRecallF1.jpg)
+![Precision](../1/Media/Images/recall.png)
 
 _Fig 3. Precision, Recall and F1_
 
-![Confusion Matrix](../1/Media/Images/README/ConfusionMatrix.jpg)
+![Confusion Matrix](../1/Media/Images/confusion_matrix.png)
 
 _Fig 4. Confusion Matrix_
 
@@ -135,74 +131,80 @@ _Fig 4. Confusion Matrix_
 
 | Accuracy  | Recall     | Precision  | AUC/ROC   |
 | --------- | ---------- | ---------- | --------- |
-| 0.966443  |  0.9814    | 0.9535     | 0.9663    |
+| 0.967807  |  0.967807    | 0.967807     | 0.935607    |
 
 ### Figures Of Merit
 
 | Figures of merit     | Amount/Value      | Percentage  |
 | -------------------- | ------------------| ------------|
-| True Positives       | 369               | 49.5302013% |
-| False Positives      | 7                 | 0.9395973%  |
-| True Negatives       | 351               | 47.1140939% |
-| False Negatives      | 18                | 2.4161073%  |
-| Misclassification    | 25                | 3.3557046%  |
-| Sensitivity / Recall | 0.9814            | 98%         |
+| True Positives       | 247               | 67.65892% |
+| False Positives      | 2                 | 0.398699%  |
+| True Negatives       | 234               | 63.97529% |
+| False Negatives      | 14                | 1.179623%  |
+| Misclassification    | 12                | 1.345706%  |
+| Sensitivity / Recall | 0.9894            | 98%         |
 
 ## Training on your own Dataset
 
-The Matlab file [DatasetAndFeaturesPreparation.m](../1/DatasetAndFeaturesPreparation.m) can be used to make the IMDS and Features MAT files for training
+The Python file [Feature_Extraction_VGG16.py](../1/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
-the above script save the generated imdsTrain, imdsValidation mat files in [**Imds**](../1/Model/Imds) and featuresTrain, featuresTest in
+the above script save the generated Train and Test files in [**data**](../1/Model/data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
 [**Features**](../1/Model/Features) Folder.
 
 &nbsp;
 
 # Real World Testing
 
-For testing the model and getting the results on random CT Lung Scan Images, we will upload an Image on a webpage for the given default IP Address and
+For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and
 Port in [config.json](../1/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
 one using Flask API and we will use python script [Server.py](../1/Server.py), which will call Flask API to interact with the webpage and
-call the [PredictImage.m](../1/PredictImage.m) matlab function through MATLAB Engine API Library which uses the pretrained model to classify the
-uploaded Image.
+call the [xDNN.py](../1/src/xDNN.py) classify function through which uses the pretrained model to classify the uploaded Image.
 
-To test an Image, navigate to the project root(../xDNN/Projects/Matlab/1/) and execute the following command in command prompt:
+To test an Image, navigate to the project root(../xDNN/Projects/Python/1/) and execute the following command in command prompt:
 
 ```
-python3 Server.py
+python Server.py
 ```
 
 The Script will start running and initiate both MATLAB Engine API and Flask API.
 
 ```
- * Serving Flask app "Server" (lazy loading)
+ * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: on
  * Restarting with stat
+C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\_distributor_init.py:32: UserWarning: loaded more than 1 DLL from .libs:
+C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\.libs\libopenblas.NOIJJG62EMASZI6NYURL6JBKM4EVBGM7.gfortran-win_amd64.dll
+C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\.libs\libopenblas.TXA6YQSD3GCQQC22GEQ54J2UDCXDXHWN.gfortran-win_amd64.dll
+  stacklevel=1)
  * Debugger is active!
- * Debugger PIN: 156-368-932
+ * Debugger PIN: 131-166-024
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
 ```
 
 Now go to your default browser and search for given HTTP address. You will see a web page as shown below:
 
-![WebPage1](../1/Media/Images/README/WebPage1.png)
+![WebPage1](../1/Media/Images/Project_Images/Server_Start.png)
+
+Go the browser and on the given HTTP address assigned you will be prompt to a webpage. 
+
+![WebPage2](../1/Media/Images/Project_Images/Webpage_image.png)
 
 Now Upload any JPG, JPEG or PNG CT Scan image file by clicking **Upload Image**. Keep in Mind that the Image file should have at atleast size of
  (224,224) image pixels. After Uploading Image, click on **Show Results**:
 
- ![WebPage2](../1/Media/Images/README/WebPage2.png)
+ ![WebPage2](../1/Media/Images/Project_Images/webpage_input.png)
 
-The Web Page can take 2-3 minutes to calculate and show the results as the Matlab API engine is run from python. It can take few minutes and performance
-varies with the given System Configurations.
+The Web Page will provide a predict button to classify the image from the server. 
 
-![WebPage3](../1/Media/Images/README/WebPage3.png)
+![WebPage3](../1/Media/Images/Project_Images/webpage_predict.png)
 
 After Sometime it will give results for the uploaded Image as shown:
 
-![WebPage4](../1/Media/Images/README/WebPage4.png)
+![WebPage4](../1/Media/Images/Project_Images/webpage_covid.png)
 
 &nbsp;
 
@@ -227,9 +229,6 @@ Please read the [CONTRIBUTING](../../../CONTRIBUTING.md "CONTRIBUTING") document
 requests. You will also find information about our code of conduct on this page.
 
 ## Contributors
-
-- [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") -
-[Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") R&D Junior, Ahmedabad, Gujarat, India.
 
 - [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research")
 AI R&D, Aurangabad, India.
