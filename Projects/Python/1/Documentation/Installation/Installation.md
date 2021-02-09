@@ -1,6 +1,6 @@
 # Peter Moss COVID-19 AI Research Project
 ## COVID-19 xDNN Python Classifier
-[![GeniSysAI Server](../../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN)
+[![GeniSysAI Server](../../../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN)
 
 &nbsp;
 
