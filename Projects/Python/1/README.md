@@ -63,12 +63,16 @@ certain types of cancer and COVID-19. I am not a doctor, medical or cancer/COVID
 
 Please follow the [Installation Guide](../1/Documentation/Installation/Installation.md) to install COVID-19 xDNN Python Classifier.
 
-# Data Pre-processing 
+# Download Dataset 
 
-In this techniques, we need to process the data for training and testing model. The data should be downloaded from the given [link](http://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset) 
+Download the dataset from this [link](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
 Extract the file and paste it in the (./Model/Data/) folder. 
 
-run `Feature_Extraction_VGG16.py`(Feature_Extraction_VGG16.py) or `Feature_Extraction_VGG16_PyTorch.py`(Feature_Extraction_VGG16_PyTorch.py) file in spyder 
+# Data Pre-processing 
+
+In this techniques, we need to process the data for training and testing model. 
+
+run [Feature_Extraction_VGG16.py](./Scripts/Feature_Extraction_VGG16.py) or [Feature_Extraction_VGG16_PyTorch.py](./Scripts/Feature_Extraction_VGG16_PyTorch.py) file in spyder 
 
 This will load the file and convert into the train and test feature file with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
 
