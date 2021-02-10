@@ -63,9 +63,109 @@ certain types of cancer and COVID-19. I am not a doctor, medical or cancer/COVID
 
 Please follow the [Installation Guide](../1/Documentation/Installation/Installation.md) to install COVID-19 xDNN Python Classifier.
 
-# Train
+# Data Pre-processing 
 
-Assuming you have completed the installation guide, you can now begin training.
+In this techniques, we need to process the data for training and testing model. The data should be downloaded from the given [link](http://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset) 
+Extract the file and paste it in the (./Model/Data/) folder. 
+
+run `Feature_Extraction_VGG16.py`(Feature_Extraction_VGG16.py) or `Feature_Extraction_VGG16_PyTorch.py`(Feature_Extraction_VGG16_PyTorch.py) file in spyder 
+
+This will load the file and convert into the train and test feature file with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
+
+We will be using [VGG16 Model](https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py) for extracting features and data points. 
+
+```
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+input_1 (InputLayer)         [(None, 224, 224, 3)]     0
+_________________________________________________________________
+block1_conv1 (Conv2D)        (None, 224, 224, 64)      1792
+_________________________________________________________________
+block1_conv2 (Conv2D)        (None, 224, 224, 64)      36928
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, 112, 112, 64)      0
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, 112, 112, 128)     73856
+_________________________________________________________________
+block2_conv2 (Conv2D)        (None, 112, 112, 128)     147584
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, 56, 56, 128)       0
+_________________________________________________________________
+block3_conv1 (Conv2D)        (None, 56, 56, 256)       295168
+_________________________________________________________________
+block3_conv2 (Conv2D)        (None, 56, 56, 256)       590080
+_________________________________________________________________
+block3_conv3 (Conv2D)        (None, 56, 56, 256)       590080
+_________________________________________________________________
+block3_pool (MaxPooling2D)   (None, 28, 28, 256)       0
+_________________________________________________________________
+block4_conv1 (Conv2D)        (None, 28, 28, 512)       1180160
+_________________________________________________________________
+block4_conv2 (Conv2D)        (None, 28, 28, 512)       2359808
+_________________________________________________________________
+block4_conv3 (Conv2D)        (None, 28, 28, 512)       2359808
+_________________________________________________________________
+block4_pool (MaxPooling2D)   (None, 14, 14, 512)       0
+_________________________________________________________________
+block5_conv1 (Conv2D)        (None, 14, 14, 512)       2359808
+_________________________________________________________________
+block5_conv2 (Conv2D)        (None, 14, 14, 512)       2359808
+_________________________________________________________________
+block5_conv3 (Conv2D)        (None, 14, 14, 512)       2359808
+_________________________________________________________________
+block5_pool (MaxPooling2D)   (None, 7, 7, 512)         0
+_________________________________________________________________
+flatten (Flatten)            (None, 25088)             0
+_________________________________________________________________
+fc1 (Dense)                  (None, 4096)              102764544
+_________________________________________________________________
+fc2 (Dense)                  (None, 4096)              16781312
+=================================================================
+Total params: 134,260,544
+Trainable params: 134,260,544
+Non-trainable params: 0
+_________________________________________________________________
+```
+
+The extracted features will be shown like this 
+
+```
+[[0.         0.         0.         ... 0.         0.         0.97085285]
+ [2.2869196  0.         0.64155865 ... 0.         0.         1.4732528 ]
+ [0.         0.         0.         ... 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         ... 0.         0.         0.91862583]
+ [0.         0.         0.         ... 0.         0.         0.7122305 ]
+ [0.         0.         0.07393801 ... 0.         0.         0.75918955]]
+['Covid (1).png;0' 'Covid (10).png;0' 'Covid (100).png;0' ...
+ 'Non-Covid (997).png;1' 'Non-Covid (998).png;1' 'Non-Covid (999).png;1']
+```
+
+# Training Model 
+
+Run 'main.py' file from the main roote folder 
+
+The extracted features are further process in the xDNN model for the training purpose. 
+```
+###################### Data Loaded ######################
+Data Shape:
+X train:  (1984, 4096)
+Y train:  (1984, 2)
+X test:  (497, 4096)
+Y test:  (497, 2)
+```
+
+The model takes less time compared to the ordinary model training procedure. 
+
+```
+###################### Model Trained ####################
+Time:  52.63 seconds
+```
+
+Further the results are shown on the Readme file. 
+
 
 ## Start Training
 
@@ -146,12 +246,17 @@ _Fig 3. Confusion Matrix_
 
 ## Training on your own Dataset
 
-The Python file [Feature_Extraction_VGG16.py](../1/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
+The Python file [Feature_Extraction_VGG16.py](../1/Scripts/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
 the above script save the generated Train and Test files in [**data**](../1/Model/data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
 [**Features**](../1/Model/Features) Folder.
 
 &nbsp;
+
+# Custom Classifier 
+
+You can run `classifier.py` file for classifying the image from the CT Scan data. 
+It will provide COVID or normal results with the prediction accurate score. 
 
 # Real World Testing
 

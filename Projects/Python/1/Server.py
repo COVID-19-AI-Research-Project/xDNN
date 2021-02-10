@@ -1,14 +1,15 @@
-###########################################################################################
+############################################################################################
 #
 # Project:       Peter Moss COVID-19 AI Research Project
 # Repository:    COVID-19 AI Classification
-# Project:       COVID-19 xDNN Classifier
+# Project:       COVID-19 Pneumonia Detection/Early Detection
 #
 # Author:        Nitin Mane
 # Title:         Predict CT Scan on Web Page
 # Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
 # License:       MIT License
-# Last Modified: 2021-02-08
+# Last Modified: 2021-02-10
+#
 ############################################################################################
 
 from __future__ import division, print_function
@@ -47,9 +48,30 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_curve, auc
 import matplotlib.pyplot as plt
 
+
+# coding=utf-8
+import sys, os, glob, re, matlab.engine
+import logging, json
+
+
 #######################################################################################################################
 app = Flask(__name__)
 app.secret_key = ('7LQl_lAfBQMjT4rkNMrV3g')
+
+#creating logger file
+logger = logging.getLogger('Server.py')
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler = logging.FileHandler('./Logs/allLogs.log')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+#Loads the program configuration
+with open('config.json') as confs:
+    confs = json.loads(confs.read())
+
+
+categories = ["COVID-19", "Normal"]
 
 def model_predict(img_path, model):
     img = image.load_img(img_path, target_size=(224, 224))
@@ -148,17 +170,31 @@ def upload():
         #img = ('./static/uploads/test.png')
         #img = image.load_img(img, target_size=(224, 224))
     img_feature = ext_feature('./static/uploads/test.png')
+    logger.info("Image file {} successfully saved in {} folder".format(f, dir_name))
     prediction = classify_image(img_feature)
         
     out1 = prediction['Scores'][0][0]
     out2 = prediction['Scores'][0][1]
+    
+    # Responds to standard HTTP request.
 
-    if out1 > out2:
+	message = ""
+	classification = self.model.http_classify(request)
+
+	if out1 > out2:
+        message = ("COVID-19 detected!")
+		diagnosis = ("Positive")
         result = ('COVID19 Detected')
         print('COVID19 Detected  Prediction:', str(out1))
-    else:
-        result = ('Normal Detected')
-        print('Normal Detected  Prediction:', str(out2))
+	else:
+		message = ("COVID-19 not detected!")
+		diagnosis = ("Negative")
+
+	resp = jsonpickle.encode({
+		Response': 'OK',
+		'Message': message,
+		'Diagnosis': diagnosis
+
         
     #return render_template('base.html', filename=filename)
     return (result)
