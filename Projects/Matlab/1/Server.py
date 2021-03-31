@@ -15,7 +15,11 @@ from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
 from PIL import Image
+<<<<<<< HEAD
 import jsonpickle
+=======
+
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 # coding=utf-8
 import sys, os, glob, re, matlab.engine
 import logging, json

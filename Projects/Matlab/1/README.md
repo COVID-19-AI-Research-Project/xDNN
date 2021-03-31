@@ -1,4 +1,5 @@
 # Peter Moss COVID-19 AI Research Project
+<<<<<<< HEAD
 
 ## COVID-19 xDNN
 
@@ -7,6 +8,12 @@
 [![xDNN](../../../Media/Images/covid-19-ai-research-xdnn.png)]()
 
 [![VERSION](https://img.shields.io/badge/VERSION-0.0.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.0.0) [![DEV BRANCH](https://img.shields.io/badge/DEV%20BRANCH-0.1.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.1.0) [![Issues Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md) [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
+=======
+## COVID-19 xDNN
+### COVID-19 xDNN Matlab Classifier Project 1
+
+[![COVID-19 xDNN Matlab Classifier](../../../Media/Images/covid-19-ai-research-xdnn.png)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/master/Projects/Matlab/1)
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 &nbsp;
 
@@ -31,37 +38,60 @@
 
 
 #  Introduction
+<<<<<<< HEAD
 
 The contamination by SARS-CoV-2 which causes the COVID-19 disease has generally spread everywhere throughout the world since the start of 2020. On January 30, 2020, the World Health Organization (WHO) proclaimed a worldwide health crisis. Analysts of various orders work alongside general health authorities to comprehend the SARS-CoV-2 pathogenesis and together with the policymakers direly create techniques to control the spread of this new disease.
 
 Recent findings have observed imaging patterns on computed tomography (CT) for patients infected by SARS-CoV-2.
 
 In this research, we have used a public available [SARS-COV-2 Ct-Scan Dataset](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset),
+=======
+In this research, we have used Matlab and the publicly available [SARS-COV-2 Ct-Scan Dataset](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset),
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 containing 1252 CT scans that are positive for SARS-CoV-2 infection (COVID-19) and 1230 CT scans for patients non-infected by SARS-CoV-2.
 This dataset of CT scans for SARS-CoV-2 (COVID-19) identification is created by our collaborators, Plamenlancaster:
 [Professor Plamen Angelov](https://www.lancaster.ac.uk/lira/people/#d.en.397371) from [Lancaster University](https://www.lancaster.ac.uk/)/
 Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,
 [Eduardo Soares PhD](https://www.lancaster.ac.uk/sci-tech/about-us/people/eduardo-almeida-soares).
 
+<<<<<<< HEAD
 These data have been collected from real patients in hospitals from Sao Paulo, Brazil.
 
 The aim of this dataset is to encourage the research and development of artificial intelligent methods which are able to identify if a person is is infected by SARS-CoV-2 through the analysis of his/her CT scans.
 As baseline result for this dataset we used an eXplainable Deep Learning approach (xDNN) which we could achieve an F1 score of **0.9672** which is very promising.
 
+=======
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 &nbsp;
 
 # DISCLAIMER
 
+<<<<<<< HEAD
 This project should be used for research purposes only. The purpose of the project is to show the potential of Artificial Intelligence for medical support
 systems such as diagnosis systems. Although the program is fairly accurate and shows good results both on paper and in real world testing, it is not meant
 to be an alternative to professional medical diagnosis. I am a self taught developer with some experience in using Artificial Intelligence for detecting
 certain types of cancer and COVID-19. I am not a doctor, medical or cancer/COVID-19 expert. Please use this system responsibly.
+=======
+This project should be used for research purposes only. The purpose of the project is to show the potential of Artificial Intelligence for medical support systems such as diagnosis systems.
+
+Although the program is very accurate and shows good results both on paper and in real world testing, it is not meant to be an alternative to professional medical diagnosis.
+
+Developers that have contributed to this repository have experience in using Artificial Intelligence for detecting certain types of cancer & COVID-19. They are not a doctors, medical, or COVID-19 experts.
+
+Please use this system responsibly.
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 &nbsp;
 
 # Installation
 
+<<<<<<< HEAD
 Please follow the [Installation Guide](../1/Documentation/Installation/Installation.md) to install COVID-19 xDNN Matlab Classifier.
+=======
+Please follow the [Installation Guide](Documentation/Installation/Installation.md) to install COVID-19 xDNN Matlab Classifier.
+
+&nbsp;
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 # Train
 
@@ -69,7 +99,11 @@ Assuming you have completed the installation guide, you can now begin training.
 
 ## Start Training
 
+<<<<<<< HEAD
 Open Matlab2020 and navigate to the project root directory and execute the following command:
+=======
+Open Matlab 2020 and navigate to the project root directory and execute the following command:
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 ```
 TrainModel
@@ -115,6 +149,7 @@ Confusion_Matrix =
     18   351
 ```
 
+<<<<<<< HEAD
 ![Accuracy](../1/Media/Images/README/Accuracy.jpg)
 
 _Fig 1. Accuracy_
@@ -128,6 +163,21 @@ _Fig 2. ROC/AUC_
 _Fig 3. Precision, Recall and F1_
 
 ![Confusion Matrix](../1/Media/Images/README/ConfusionMatrix.jpg)
+=======
+![Accuracy](Media/Images/README/Accuracy.jpg)
+
+_Fig 1. Accuracy_
+
+![ROC](Media/Images/README/ROC.jpg)
+
+_Fig 2. ROC/AUC_
+
+![Precision](Media/Images/README/PrecisionRecallF1.jpg)
+
+_Fig 3. Precision, Recall and F1_
+
+![Confusion Matrix](Media/Images/README/ConfusionMatrix.jpg)
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 _Fig 4. Confusion Matrix_
 
@@ -150,19 +200,32 @@ _Fig 4. Confusion Matrix_
 
 ## Training on your own Dataset
 
+<<<<<<< HEAD
 The Matlab file [DatasetAndFeaturesPreparation.m](../1/DatasetAndFeaturesPreparation.m) can be used to make the IMDS and Features MAT files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
 the above script save the generated imdsTrain, imdsValidation mat files in [**Imds**](../1/Model/Imds) and featuresTrain, featuresTest in
 [**Features**](../1/Model/Features) Folder.
+=======
+The Matlab file [DatasetAndFeaturesPreparation.m](DatasetAndFeaturesPreparation.m) can be used to make the IMDS and Features MAT files for training
+on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
+the above script save the generated imdsTrain, imdsValidation mat files in [**Imds**](Model/Imds) and featuresTrain, featuresTest in
+[**Features**](Model/Features) Folder.
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 &nbsp;
 
 # Real World Testing
 
 For testing the model and getting the results on random CT Lung Scan Images, we will upload an Image on a webpage for the given default IP Address and
+<<<<<<< HEAD
 Port in [config.json](../1/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
 one using Flask API and we will use python script [Server.py](../1/Server.py), which will call Flask API to interact with the webpage and
 call the [PredictImage.m](../1/PredictImage.m) matlab function through MATLAB Engine API Library which uses the pretrained model to classify the
+=======
+Port in [config.json](config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
+one using Flask API and we will use python script [Server.py](Server.py), which will call Flask API to interact with the webpage and
+call the [PredictImage.m](PredictImage.m) matlab function through MATLAB Engine API Library which uses the pretrained model to classify the
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 uploaded Image.
 
 To test an Image, navigate to the project root(../xDNN/Projects/Matlab/1/) and execute the following command in command prompt:
@@ -188,21 +251,37 @@ The Script will start running and initiate both MATLAB Engine API and Flask API.
 
 Now go to your default browser and search for given HTTP address. You will see a web page as shown below:
 
+<<<<<<< HEAD
 ![WebPage1](../1/Media/Images/README/WebPage1.png)
+=======
+![WebPage1](Media/Images/README/WebPage1.png)
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 Now Upload any JPG, JPEG or PNG CT Scan image file by clicking **Upload Image**. Keep in Mind that the Image file should have at atleast size of
  (224,224) image pixels. After Uploading Image, click on **Show Results**:
 
+<<<<<<< HEAD
  ![WebPage2](../1/Media/Images/README/WebPage2.png)
+=======
+ ![WebPage2](Media/Images/README/WebPage2.png)
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 The Web Page can take 2-3 minutes to calculate and show the results as the Matlab API engine is run from python. It can take few minutes and performance
 varies with the given System Configurations.
 
+<<<<<<< HEAD
 ![WebPage3](../1/Media/Images/README/WebPage3.png)
 
 After Sometime it will give results for the uploaded Image as shown:
 
 ![WebPage4](../1/Media/Images/README/WebPage4.png)
+=======
+![WebPage3](Media/Images/README/WebPage3.png)
+
+After Sometime it will give results for the uploaded Image as shown:
+
+![WebPage4](Media/Images/README/WebPage4.png)
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 &nbsp;
 
@@ -228,17 +307,27 @@ requests. You will also find information about our code of conduct on this page.
 
 ## Contributors
 
+<<<<<<< HEAD
 - [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") -
 [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research") R&D Junior, Ahmedabad, Gujarat, India.
 
 - [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Peter Moss Leukemia AI Research](https://www.leukemiaresearchassociation.ai "Peter Moss Leukemia AI Research")
 AI R&D, Aurangabad, India.
+=======
+- [Aniruddh Sharma](https://www.leukemiaresearchassociation.ai/team/aniruddh-sharma "Aniruddh Sharma") - [Asociacion De Investigatcion En Inteligencia Artificial Para La Leucemia Peter Moss](https://www.leukemiaresearchassociation.ai "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") R&D Junior, Ahmedabad, Gujarat, India
+
+- [Nitin Mane](https://www.leukemiaresearchassociation.ai/team/nitin-mane "Nitin Mane") - [Asociacion De Investigatcion En Inteligencia Artificial Para La Leucemia Peter Moss](https://www.leukemiaresearchassociation.ai "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") AI R&D, Aurangabad, India
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 &nbsp;
 
 # Versioning
 
+<<<<<<< HEAD
 We use SemVer for versioning. For the versions available, see [Releases](../../../../../releases "Releases").
+=======
+We use SemVer for versioning. For the versions available, see [Releases](../../../releases "Releases").
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 
 &nbsp;
 
@@ -250,5 +339,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](../../../
 
 # Bugs/Issues
 
+<<<<<<< HEAD
 We use the [repo issues](../../../../../issues "repo issues") to track bugs and general requests related to using this project. See
+=======
+We use the [repo issues](../../../issues "repo issues") to track bugs and general requests related to using this project. See
+>>>>>>> 8e197950a416502c0a06c42add58a3296f4745c5
 [CONTRIBUTING](../../../CONTRIBUTING.md "CONTRIBUTING") for more info on how to submit bugs, feature requests and proposals.
