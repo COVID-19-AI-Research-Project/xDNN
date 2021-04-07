@@ -247,7 +247,7 @@ _Fig 3. Confusion Matrix_
 
 The Python file [Feature_Extraction_VGG16.py](../1/Scripts/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
-the above script save the generated Train and Test files in [**data**](./Model/data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
+the above script save the generated Train and Test files in [**data**](./Model/Data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
 [**Features**](./Model/Features) Folder.
 
 &nbsp;
@@ -259,10 +259,9 @@ It will provide COVID or normal results with the prediction accurate score on th
 
 # Real World Testing
 
-For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and
-Port in [config.json](config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
+For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and Port, then it will provide the result for the given Image.The webpage interface to upload and predict images is
 one using Flask API and we will use python script [app.py](./app.py), which will call Flask API to interact with the webpage and
-call the [xDNN.py](../1/src/xDNN.py) classify function through which uses the pretrained model to classify the uploaded Image.
+call the [xDNN.py](./src/xDNN.py) classify function through which uses the pretrained model to classify the uploaded Image.
 
 To test an Image, navigate to the project root(../xDNN/Projects/Python/1/) and execute the following command in command prompt:
 

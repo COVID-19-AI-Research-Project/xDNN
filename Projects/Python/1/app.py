@@ -34,8 +34,8 @@ from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.models import Model
 
 # src 
-from src.xDNN_class import *
-from src.xDNN_class import xDNN
+from Scripts.src.xDNN_class import *
+from Scripts.src.xDNN_class import xDNN
 from numpy import genfromtxt
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
