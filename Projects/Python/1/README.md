@@ -255,19 +255,19 @@ the above script save the generated Train and Test files in [**data**](../1/Mode
 # Custom Classifier 
 
 You can run `classifier.py` file for classifying the image from the CT Scan data. 
-It will provide COVID or normal results with the prediction accurate score. 
+It will provide COVID or normal results with the prediction accurate score on the command prompt.
 
 # Real World Testing
 
 For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and
-Port in [config.json](../1/Features/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
+Port in [config.json](../1/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
 one using Flask API and we will use python script [Server.py](../1/Server.py), which will call Flask API to interact with the webpage and
 call the [xDNN.py](../1/src/xDNN.py) classify function through which uses the pretrained model to classify the uploaded Image.
 
 To test an Image, navigate to the project root(../xDNN/Projects/Python/1/) and execute the following command in command prompt:
 
 ```
-python Server.py
+python app.py
 ```
 
 The Script will start running and initiate with the Flask API.
