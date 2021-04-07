@@ -174,24 +174,13 @@ def upload():
     
     # Responds to standard HTTP request.
 
-	message = ""
-	classification = self.model.http_classify(request)
+    classification = self.model.http_classify(request)
 
-	if out1 > out2:
-        message = ("COVID-19 detected!")
-		diagnosis = ("Positive")
-        result = ('COVID19 Detected')
+    if out1 > out2:
         print('COVID19 Detected  Prediction:', str(out1))
-	else:
-		message = ("COVID-19 not detected!")
-		diagnosis = ("Negative")
-
-	resp = jsonpickle.encode({
-		Response': 'OK',
-		'Message': message,
-		'Diagnosis': diagnosis
-
-        
+    else:
+        print("Negative")
+       
     #return render_template('base.html', filename=filename)
     return (result)
     
