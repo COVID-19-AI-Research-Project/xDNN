@@ -247,8 +247,8 @@ _Fig 3. Confusion Matrix_
 
 The Python file [Feature_Extraction_VGG16.py](../1/Scripts/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
-the above script save the generated Train and Test files in [**data**](../1/Model/data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
-[**Features**](../1/Model/Features) Folder.
+the above script save the generated Train and Test files in [**data**](./1/Model/data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
+[**Features**](./1/Model/Features) Folder.
 
 &nbsp;
 
