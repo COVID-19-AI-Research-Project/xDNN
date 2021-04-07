@@ -10,6 +10,8 @@
 - [Required Hardware](#required-hardware)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
+- [Clone the Repository](#clone-the-repository)
+    - [Developer Forks](#developer-forks)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -74,6 +76,49 @@ After completing the process. Restart the computer and open Anaconda Navigator a
 
 &nbsp;
 
+## Clone the Repository
+
+Clone the [COVID-19 xDNN](https://github.com/COVID-19-AI-Research-Project/xDNN " COVID-19 xDNN") repository from the [Peter Moss COVID-19 AI Research](https://github.com/COVID-19-AI-Research-Project "Peter Moss COVID-19 AI Research") Github Organization.
+
+
+To clone the repository and install this project, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
+
+```
+  $ git clone https://github.com/COVID-19-AI-Research-Project/xDNN.git
+```
+
+Once you have used the command above you will see a directory called **xDNN** in your home directory.
+
+```
+ls
+```
+
+Using the ls command in your home directory should show you the following.
+
+```
+COVID-19-AI-Research-Project
+```
+
+Navigate to **COVID-19-AI-Research-Project/Projects/Python/1** directory, this is your project root directory for this tutorial.
+
+### Developer Forks
+
+=======
+XDNN
+```
+
+Navigate to **COVID-19-AI-Research-Project/XDNN/Projects/Python/1** directory, this is your project root directory for this tutorial.
+
+### Developer Forks
+Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
+
+```
+  $ git clone -b "0.2.0" https://github.com/COVID-19-AI-Research-Project/xDNN.git
+```
+
+The **-b "0.2.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
+
+&nbsp;
 
 # Contributing
 
