@@ -102,8 +102,7 @@ COVID-19-AI-Research-Project
 Navigate to **COVID-19-AI-Research-Project/Projects/Python/1** directory, this is your project root directory for this tutorial.
 
 ### Developer Forks
-
-=======
+```
 XDNN
 ```
 
