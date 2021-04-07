@@ -127,4 +127,3 @@ print('Cohens kappa: %f' % kappa)
 # confusion matrix
 matrix = confusion_matrix(y_test_labels , Output2['EstLabs'])
 print("Confusion Matrix: ",matrix)
-

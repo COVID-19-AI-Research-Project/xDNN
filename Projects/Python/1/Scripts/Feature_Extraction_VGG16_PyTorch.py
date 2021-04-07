@@ -62,7 +62,7 @@ def extractor(img_path, net):
 
 
 #Load the data directory  where the images are stored
-data_dir = './Model/data/'
+data_dir = '../Model/data/'
 contents = os.listdir(data_dir)
 classes = [each for each in contents if os.path.isdir(data_dir + each)]
 #Each folder becomes a different class
@@ -119,7 +119,7 @@ data_df_y_test = pd.DataFrame(y_test)
 print(data_df_X_train)
 
 # Save file as .csv
-data_df_X_train.to_csv('./Model/Features/data_df_X_train_lite.csv',header=False,index=False)
-data_df_y_train.to_csv('./Model/Features/data_df_y_train_lite.csv',header=False,index=False)
-data_df_X_test.to_csv('./Model/Features/data_df_X_test_lite.csv',header=False,index=False)
-data_df_y_test.to_csv('./Model/Features/data_df_y_test_lite.csv',header=False,index=False)
+data_df_X_train.to_csv('../Model/Features/data_df_X_train_lite.csv',header=False,index=False)
+data_df_y_train.to_csv('../Model/Features/data_df_y_train_lite.csv',header=False,index=False)
+data_df_X_test.to_csv('../Model/Features/data_df_X_test_lite.csv',header=False,index=False)
+data_df_y_test.to_csv('../Model/Features/data_df_y_test_lite.csv',header=False,index=False)

@@ -71,8 +71,7 @@ Extract the file and paste it in the (./Model/Data/) folder.
 # Data Pre-processing 
 
 In this techniques, we need to process the data for training and testing model. 
-
-run [Feature_Extraction_VGG16.py](./Scripts/Feature_Extraction_VGG16.py) or [Feature_Extraction_VGG16_PyTorch.py](./Scripts/Feature_Extraction_VGG16_PyTorch.py) file in spyder 
+Go to the 'Scripts' file and run [Feature_Extraction_VGG16.py](./Scripts/Feature_Extraction_VGG16.py) or [Feature_Extraction_VGG16_PyTorch.py](./Scripts/Feature_Extraction_VGG16_PyTorch.py) file in spyder 
 
 This will load the file and convert into the train and test feature file with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
 
@@ -149,7 +148,12 @@ The extracted features will be shown like this
 
 # Training Model 
 
-Run 'main.py' file from the main roote folder 
+Open Python IDE or Anaconda IDE (Command prompt or spyder) and navigate to the project root directory and execute the following command:
+
+run the following command
+```
+python main.py
+```
 
 The extracted features are further process in the xDNN model for the training purpose. 
 ```
@@ -169,15 +173,6 @@ Time:  52.63 seconds
 ```
 
 Further the results are shown on the Readme file. 
-
-
-## Start Training
-
-Open Python IDE or Anaconda IDE (Command prompt or spyder) and navigate to the project root directory and execute the following command:
-
-```
-TrainModel
-```
 
 ## Training Results
 
