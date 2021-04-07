@@ -1,5 +1,18 @@
+############################################################################################
+#
+# Project:       Peter Moss COVID-19 AI Research Project
+# Repository:    COVID-19 AI Classification
+# Project:       COVID-19 Pneumonia Detection/Early Detection
+#
+# Author:        Nitin Mane
+# Title:         Predict CT Scan on Web Page
+# Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
+# License:       MIT License
+# Last Modified: 2021-04-07
+#
+############################################################################################
+
 from __future__ import division, print_function
-# coding=utf-8
 import sys
 import os
 import glob

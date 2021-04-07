@@ -8,7 +8,7 @@
 # Title:         Predict CT Scan on Web Page
 # Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
 # License:       MIT License
-# Last Modified: 2021-02-10
+# Last Modified: 2021-04-07
 #
 ############################################################################################
 
@@ -20,6 +20,8 @@ import glob
 import re
 import numpy as np
 import pandas as pd
+import sys, os, glob, re
+import logging, json
 
 #from app import app
 import urllib.request
@@ -49,14 +51,8 @@ from sklearn.metrics import roc_curve, auc
 import matplotlib.pyplot as plt
 
 
-# coding=utf-8
-import sys, os, glob, re, matlab.engine
-import logging, json
-
-
-#######################################################################################################################
 app = Flask(__name__)
-app.secret_key = ('7LQl_lAfBQMjT4rkNMrV3g')
+app.secret_key = ('enter your key')
 
 #creating logger file
 logger = logging.getLogger('Server.py')

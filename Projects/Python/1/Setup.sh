@@ -22,8 +22,16 @@ if [ "$cmsg" = "Y" -o "$cmsg" = "y" ]; then
     sudo apt-get install liblapack-dev cython
     sudo pip3 install pybind11
     sudo pip3 install h5py
-    wget https://github.com/Qengineering/Tensorflow-Raspberry-Pi/raw/master/tensorflow-2.1.0-cp37-cp37m-linux_armv7l.whl
-    sudo -H pip3 install tensorflow-2.1.0-cp37-cp37m-linux_armv7l.whl
+    sudo pip3 install certifi
+    sudo pip3 install google-auth
+    sudo pip3 install protobuf
+    sudo pip3 install urllib3
+    sudo pip3 install visitor
+    sudo pip3 install Werkzeug==1.0.1
+    sudo pip3 install wincertstore==0.2
+    sudo pip3 install wrapt==1.12.1
+    wget https://github.com/Qengineering/Tensorflow-Raspberry-Pi/raw/master/tensorflow-2.4.0-cp36-cp36m-linux_armv7l.whl
+    sudo -H pip3 install tensorflow-2.4.0-cp36-cp36m-linux_armv7l.whl
 
 else
     echo $FMSG;

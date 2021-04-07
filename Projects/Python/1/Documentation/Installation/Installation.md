@@ -77,7 +77,7 @@ ls
 Using the ls command in your home directory should show you the following.
 
 ```
-COVID-19-AI-Research-Project
+cd COVID-19-AI-Research-Project
 ```
 
 Navigate to **COVID-19-AI-Research-Project/Projects/Python/1** directory, this is your project root directory for this tutorial.
@@ -117,6 +117,7 @@ It will ask rights for installing the libaries. Just type Y and enter when asked
 After completing the process. Restart the computer and open Anaconda Navigator and click on the spyder IDE. 
 
 &nbsp;
+
 
 
 # Contributing

@@ -1,10 +1,16 @@
-"""
-Please cite:
-    
-Angelov, P., & Soares, E. (2020). Towards explainable deep neural networks (xDNN). Neural Networks.
-
-Modified by Nitin Mane
-"""
+############################################################################################
+#
+# Project:       Peter Moss COVID-19 AI Research Project
+# Repository:    COVID-19 AI Classification
+# Project:       COVID-19 Pneumonia Detection/Early Detection
+#
+# Author:        Nitin Mane
+# Title:         Predict CT Scan on Web Page
+# Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
+# License:       MIT License
+# Last Modified: 2021-04-07
+#
+############################################################################################
 
 import math
 import numpy as np

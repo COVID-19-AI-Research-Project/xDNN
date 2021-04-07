@@ -1,12 +1,16 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug  7 22:43:03 2020
-
-@author: eduardosoares
-
-Modified by Nitin Mane
-"""
+############################################################################################
+#
+# Project:       Peter Moss COVID-19 AI Research Project
+# Repository:    COVID-19 AI Classification
+# Project:       COVID-19 Pneumonia Detection/Early Detection
+#
+# Author:        Nitin Mane
+# Title:         Predict CT Scan on Web Page
+# Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
+# License:       MIT License
+# Last Modified: 2021-04-07
+#
+############################################################################################
 
 import torch
 import torchvision.models as models
