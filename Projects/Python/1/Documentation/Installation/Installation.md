@@ -9,9 +9,9 @@
 - [Introduction](#introduction)
 - [Required Hardware](#required-hardware)
 - [Prerequisites](#prerequisites)
-- [Installation](#installation)
 - [Clone the Repository](#clone-the-repository)
     - [Developer Forks](#developer-forks)
+- [Installation](#installation)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -57,25 +57,6 @@ The software required are as follows:
 
 &nbsp;
 
-# Installation 
-
-First install the Anaconda IDE and navigate to the command prompt. 
-Create a new environment for Python 3.6.5 as by default the anaconda has python 3.7 installed. 
-```
-conda create -n myenv python=3.6.5
-```
-
-Go to the root directory of this project file and install the dependencies using the following command in the prompt. 
-```
-pip -r requirements.txt
-```
-It will ask rights for installing the libaries. Just type Y and enter when asked. This will take some time to install the dependencies as it may consume more data depending on the file. 
-
-After completing the process. Restart the computer and open Anaconda Navigator and click on the spyder IDE. 
-
-
-&nbsp;
-
 ## Clone the Repository
 
 Clone the [COVID-19 xDNN](https://github.com/COVID-19-AI-Research-Project/xDNN " COVID-19 xDNN") repository from the [Peter Moss COVID-19 AI Research](https://github.com/COVID-19-AI-Research-Project "Peter Moss COVID-19 AI Research") Github Organization.
@@ -118,6 +99,25 @@ Developers from the Github community that would like to contribute to the develo
 The **-b "0.2.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
 
 &nbsp;
+
+# Installation 
+
+First install the Anaconda IDE and navigate to the command prompt. 
+Create a new environment for Python 3.6.5 as by default the anaconda has python 3.7 installed. 
+```
+conda create -n myenv python=3.6.5
+```
+
+Go to the root directory of this project file and install the dependencies using the following command in the prompt. 
+```
+pip install -r requirements.txt
+```
+It will ask rights for installing the libaries. Just type Y and enter when asked. This will take some time to install the dependencies as it may consume more data depending on the file. 
+
+After completing the process. Restart the computer and open Anaconda Navigator and click on the spyder IDE. 
+
+&nbsp;
+
 
 # Contributing
 
