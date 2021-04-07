@@ -60,9 +60,9 @@ The software required are as follows:
 # Installation 
 
 First install the Anaconda IDE and navigate to the command prompt. 
-Create a new environment for Python 3.6 as by default the anaconda has python 3.7 installed. 
+Create a new environment for Python 3.6.5 as by default the anaconda has python 3.7 installed. 
 ```
-conda create -n myenv python=3.6
+conda create -n myenv python=3.6.5
 ```
 
 Go to the root directory of this project file and install the dependencies using the following command in the prompt. 

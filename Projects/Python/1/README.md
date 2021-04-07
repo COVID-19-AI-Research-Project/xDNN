@@ -2,7 +2,7 @@
 
 ## COVID-19 xDNN
 
-### COVID-19 xDNN Matlab Classifier
+### COVID-19 xDNN Python Classifier
 
 [![xDNN](../../../Media/Images/covid-19-ai-research-xdnn.png)]()
 
@@ -265,7 +265,7 @@ It will provide COVID or normal results with the prediction accurate score.
 # Real World Testing
 
 For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and
-Port in [config.json](../1/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
+Port in [config.json](../1/Features/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
 one using Flask API and we will use python script [Server.py](../1/Server.py), which will call Flask API to interact with the webpage and
 call the [xDNN.py](../1/src/xDNN.py) classify function through which uses the pretrained model to classify the uploaded Image.
 
@@ -275,7 +275,7 @@ To test an Image, navigate to the project root(../xDNN/Projects/Python/1/) and e
 python Server.py
 ```
 
-The Script will start running and initiate both MATLAB Engine API and Flask API.
+The Script will start running and initiate with the Flask API.
 
 ```
  * Serving Flask app "app" (lazy loading)
