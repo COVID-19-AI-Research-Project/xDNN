@@ -132,27 +132,27 @@ print("Confusion Matrix: ",matrix)
 
 # Pie chart, where the slices will be ordered and plotted counter-clockwise:
 labels = 'COVID', 'Non-COVID'
-inaccurate = 1- accuracy 
-sizes = [accuracy, inaccurate ]
+inaccurate = 1 - accuracy 
+sizes = [accuracy, inaccurate]
 explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-
 plt.show()
 
 # Recall, Precision and F1
 import matplotlib.pyplot as plt
-fig = plt.figure()
-ax = fig.add_axes([0,0,1,1])
+fig2 = plt.figure()
+ax = fig2.add_axes([0,0,1,1])
 name = ['precision', 'Recall', 'F1 score']
 values = [precision,recall,f1]
-ax.bar(names,values)
+ax.bar(name,values)
 plt.show()
 
 # Confusion Matrix 
 #confusion matrix
+fig3 = plt.figure()
 skplt.metrics.plot_confusion_matrix(y_test_labels , Output2['EstLabs'], normalize=True)
 plt.show()

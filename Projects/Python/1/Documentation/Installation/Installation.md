@@ -54,7 +54,6 @@ The software required are as follows:
 3. [PyTorch Libary](https://pytorch.org/) (Optional)
 4. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
  
-
 &nbsp;
 
 ## Clone the Repository
@@ -108,7 +107,7 @@ Create a new environment for Python 3.6.5 as by default the anaconda has python 
 conda create -n myenv python=3.6.5
 ```
 
-Go to the root directory of this project file and install the dependencies using the following command in the prompt. 
+Go to the root directory of the main project file and install the dependencies using the following command in the prompt. 
 ```
 pip install -r requirements.txt
 ```
@@ -117,8 +116,6 @@ It will ask rights for installing the libaries. Just type Y and enter when asked
 After completing the process. Restart the computer and open Anaconda Navigator and click on the spyder IDE. 
 
 &nbsp;
-
-
 
 # Contributing
 

@@ -15,7 +15,7 @@
 #import libraries
 from tensorflow import keras
 from tensorflow.keras.applications.vgg16 import VGG16
-
+from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.models import Model
 import numpy as np
@@ -27,8 +27,6 @@ model = VGG16(weights='imagenet', include_top= True )
 layer_name = 'fc2'
 intermediate_layer_model = keras.Model(inputs=model.input,outputs=model.get_layer(layer_name).output)
 intermediate_layer_model.summary()
-
-
 
 #Load the data directory  where the images are stored
 data_dir = '../Model/data/'
