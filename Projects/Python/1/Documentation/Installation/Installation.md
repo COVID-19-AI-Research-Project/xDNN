@@ -84,7 +84,18 @@ While installing python the terminal will ask the permission to download file. P
 
 ## Python Virtual Environment
 
+```
+python -m pip install --user virtualenv
+```
+
 Create a new environment for Python 3.6.5 as by default the python IDE has python 3.8.0 installed default. 
+For windows OS
+
+```
+python -m venv py365 python=3.6.5
+```
+for linux OS
+
 ```
 python3 -m venv py365 python=3.6.5
 ```
@@ -92,7 +103,7 @@ This will create python environment with the version 3.6.5.
 For windows use this command for the activating the virtual environment in command prompt. 
 
 ```
-py365\bin\activate.bat
+./py365/bin/activate
 ```
 
  For Liux use this command in the terminal: 
@@ -108,7 +119,11 @@ Enter the following to install the required packages for Python:
 ```
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
 ```
+Upgrading pip package
 
+```
+python3 -m pip install --upgrade pip
+```
 
 ## Clone the Repository
 
@@ -161,7 +176,7 @@ The **-b "0.1.0"** parameter ensures you get the code from the latest master bra
 
 Go to the root directory of the main project file and install the dependencies using the following command in the prompt. 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 It will ask rights for installing the libaries. Just type Y and enter when asked. This will take some time to install the dependencies as it may consume more data depending on the file. 
 
