@@ -31,7 +31,7 @@ intermediate_layer_model.summary()
 
 
 #Load the data directory  where the images are stored
-data_dir = '../Model/data/'
+data_dir = '../Model/Data/'
 contents = os.listdir(data_dir)
 classes = [each for each in contents if os.path.isdir(data_dir + each)]
 #Each folder becomes a different class

@@ -165,7 +165,13 @@ pip install -r requirements.txt
 ```
 It will ask rights for installing the libaries. Just type Y and enter when asked. This will take some time to install the dependencies as it may consume more data depending on the file. 
 
-After completing the process. Restart the computer and open Anaconda Navigator and click on the spyder IDE. 
+For Edge Device use the following command for resolving issue on the numpy only for the linux OS. 
+
+```
+sudo apt update
+sudo apt install python3-dev python3-pip python3-venv
+sudo apt install libatlas-base-dev   
+```
 
 &nbsp;
 

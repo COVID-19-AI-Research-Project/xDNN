@@ -66,16 +66,22 @@ Please follow the [Installation Guide](../1/Documentation/Installation/Installat
 Download the dataset from this [link](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
 Extract the file and paste it in the (./Model/Data/) folder. 
 
+if using linux use the dataset will be saved in the Download folder. Use the following command for unzipping the data and moving to the project file. Please note that the terminal directory path should be in the main project location.
+
+```
+sudo unzip ~/Downloads/archive.zip -d ./Model/Data/
+```
+
 # Data Pre-processing 
 
 In this techniques, we need to process the data for training and testing model. 
-Execute the file [Feature_Extraction_VGG16.py](./Scripts/Feature_Extraction_VGG16.py) for data processing and feature extraction from the data file. 
+Execute the file [Feature_Extraction_VGG16.py](./Classes/Feature_Extraction_VGG16.py) for data processing and feature extraction from the data file. 
 
 ```
 python3 ./Classes/Feature_Extraction_VGG16.py
 ```
 
-This will load the file and convert into the train and test feature files with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
+This will take time to download the VGG16 file and process for converting into the train and test features with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
 
 We will be using [VGG16 Model](https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py) for extracting features and data points. 
 
