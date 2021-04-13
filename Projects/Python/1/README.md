@@ -6,8 +6,6 @@
 
 [![xDNN](../../../Media/Images/covid-19-ai-research-xdnn.png)]()
 
-[![VERSION](https://img.shields.io/badge/VERSION-0.0.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.0.0) [![DEV BRANCH](https://img.shields.io/badge/DEV%20BRANCH-0.1.0-blue.svg)](https://github.com/COVID-19-AI-Research-Project/xDNN/tree/0.1.0) [![Issues Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md) [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
-
 &nbsp;
 
 # Table Of Contents
@@ -71,9 +69,13 @@ Extract the file and paste it in the (./Model/Data/) folder.
 # Data Pre-processing 
 
 In this techniques, we need to process the data for training and testing model. 
-Go to the 'Scripts' file and run [Feature_Extraction_VGG16.py](./Scripts/Feature_Extraction_VGG16.py) or [Feature_Extraction_VGG16_PyTorch.py](./Scripts/Feature_Extraction_VGG16_PyTorch.py) file in spyder 
+Execute the file [Feature_Extraction_VGG16.py](./Scripts/Feature_Extraction_VGG16.py) for data processing and feature extraction from the data file. 
 
-This will load the file and convert into the train and test feature file with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
+```
+python3 ./Classes/Feature_Extraction_VGG16.py
+```
+
+This will load the file and convert into the train and test feature files with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
 
 We will be using [VGG16 Model](https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py) for extracting features and data points. 
 
@@ -152,7 +154,7 @@ Open Python IDE or Anaconda IDE (Command prompt or spyder) and navigate to the p
 
 run the following command
 ```
-python main.py
+python3 main.py
 ```
 
 The extracted features are further process in the xDNN model for the training purpose. 
@@ -257,6 +259,10 @@ the above script save the generated Train and Test files in [**data**](../1/Mode
 You can run `classifier.py` file for classifying the image from the CT Scan data. 
 It will provide COVID or normal results with the prediction accurate score on the command prompt.
 
+```
+python3 classifier.py
+```
+
 # Real World Testing
 
 For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and
@@ -267,7 +273,7 @@ call the [xDNN.py](../1/src/xDNN.py) classify function through which uses the pr
 To test an Image, navigate to the project root(../xDNN/Projects/Python/1/) and execute the following command in command prompt:
 
 ```
-python app.py
+python3 app.py
 ```
 
 The Script will start running and initiate with the Flask API.
