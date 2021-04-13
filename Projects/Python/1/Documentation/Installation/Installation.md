@@ -92,7 +92,7 @@ This will create python environment with the version 3.6.5.
 For windows use this command for the activating the virtual environment in command prompt. 
 
 ```
-myenv\bin\activate.bat
+py365\bin\activate.bat
 ```
 
  For Liux use this command in the terminal: 

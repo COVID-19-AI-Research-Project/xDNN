@@ -22,8 +22,8 @@ import os
 
 import pandas as pd
 
-from src.xDNN_class import *
-from src.xDNN_class import xDNN
+from Classes.src.xDNN_class import *
+from Classes.src.xDNN_class import xDNN
 from numpy import genfromtxt
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
