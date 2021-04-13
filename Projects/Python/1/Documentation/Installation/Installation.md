@@ -141,6 +141,11 @@ Now navigate the download file which is saved in the home directory file using t
 cd xDNN
 ```
 
+Go to the project path 
+
+```
+cd Projects/Python/1
+```
 
 ### Developer Forks
 Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.

@@ -1,0 +1,10 @@
+urllib3
+pandas
+numpy
+matplotlib
+scikit-learn
+tensorflow
+pytorch
+Flask
+Werkzeug
+WSGIserver
