@@ -145,6 +145,7 @@ Developers from the Github community that would like to contribute to the develo
 ```
 
 The **-b "0.1.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
+
 &nbsp;
 
 ### Go to Project Directory path 
@@ -174,8 +175,11 @@ Go to the project path using the following command:
 ```
 cd Projects/Python/1
 ```
+### Install dependencies packages
 
-The dependency are required for the executing code therefore its recommended to install the following packages or else use the text script for downloading packages in python. 
+The dependency are required for the executing code therefore its recommended to install the following packages or else use the text script for downloading packages in from the command prompt or terminal. 
+
+If using manual installation procedure. You can follow the installation commands for each packages:
 
 ```
 pip(3) install urllib3
@@ -193,11 +197,10 @@ pip(3) install gevent
 
 If like to install the packages from the text file then Go to the root directory of the main project file and install the dependencies using the following command in the prompt. 
 ```
-pip3 install -r requirements.txt
+pip(3) install -r requirements.txt
 ```
 It will ask rights for installing the libaries. Just type Y and enter when asked. This will take some time to install the dependencies as it may consume more data depending on the file. 
  
-
 &nbsp;
 
 # Contributing
