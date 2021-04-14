@@ -60,7 +60,7 @@ The software required are as follows:
 
 ### Install python on Windows OS 
 
-First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. It is recommended to install python 3.6.5 version. Download from the given [link](https://www.python.org/downloads/release/python-365/). While installing the python software tick the `Add Python 3.6 to the path` option and click on install now. The python will take sometime to install. After installation restart the operating system and open command prompt . To verify the python is install in the system use the following command.
+First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. It is recommended to install python 3.6.5 version. Download from the given [link](https://www.python.org/downloads/release/python-365/). While installing the python software tick the option `Add Python 3.6 to the path` and click on install now. The python will take sometime to install. After installation restart the operating system and open command prompt. To verify the python is install in the system use the following command.
 
 ```
 python --version
@@ -94,7 +94,7 @@ python -m venv py365 python=3.6.5
 for linux OS use the following command:
 
 ```
-python3 -m venv py365 python=3.6.5
+$ python(3) -m venv py365 python=3.6.5
 ```
 
 This will create python environment with the version 3.6.5. 
