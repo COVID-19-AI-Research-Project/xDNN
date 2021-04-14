@@ -160,7 +160,7 @@ Open Python IDE or Anaconda IDE (Command prompt or spyder) and navigate to the p
 
 run the following command
 ```
-python3 main.py
+python(3) main.py
 ```
 
 The extracted features are further process in the xDNN model for the training purpose. 
@@ -253,10 +253,10 @@ _Fig 3. Confusion Matrix_
 
 ## Training on your own Dataset
 
-The Python file [Feature_Extraction_VGG16.py](../1/Scripts/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
+The Python file [Feature_Extraction_VGG16.py](./Classes/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
-the above script save the generated Train and Test files in [**data**](../1/Model/data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
-[**Features**](../1/Model/Features) Folder.
+the above script save the generated Train and Test files in [**data**](./Model/Data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
+[**Features**](./Model/Features) Folder.
 
 &nbsp;
 
@@ -266,20 +266,20 @@ You can run `classifier.py` file for classifying the image from the CT Scan data
 It will provide COVID or normal results with the prediction accurate score on the command prompt.
 
 ```
-python3 classifier.py
+python(3) classifier.py
 ```
 
 # Real World Testing
 
 For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and
-Port in [config.json](../1/config.json#L2), then it will provide the result for the given Image.The webpage interface to upload and predict images is
-one using Flask API and we will use python script [Server.py](../1/Server.py), which will call Flask API to interact with the webpage and
-call the [xDNN.py](../1/src/xDNN.py) classify function through which uses the pretrained model to classify the uploaded Image.
+Port set at localhost, then it will provide the result for the given Image.The webpage interface to upload and predict images is
+one using Flask API and we will use python script [app.py](./app.py), which will call Flask API to interact with the webpage and
+call the [xDNN.py](./Classes/src/xDNN.py) and [xDNN_class.py](./Classes/src/xDNN_class.py) for the classifying the function for the model to fetch and 
 
 To test an Image, navigate to the project root(../xDNN/Projects/Python/1/) and execute the following command in command prompt:
 
 ```
-python3 app.py
+python(3) app.py
 ```
 
 The Script will start running and initiate with the Flask API.
@@ -291,9 +291,6 @@ The Script will start running and initiate with the Flask API.
    Use a production WSGI server instead.
  * Debug mode: on
  * Restarting with stat
-C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\_distributor_init.py:32: UserWarning: loaded more than 1 DLL from .libs:
-C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\.libs\libopenblas.NOIJJG62EMASZI6NYURL6JBKM4EVBGM7.gfortran-win_amd64.dll
-C:\Users\mniti\anaconda3\envs\py365\lib\site-packages\numpy\.libs\libopenblas.TXA6YQSD3GCQQC22GEQ54J2UDCXDXHWN.gfortran-win_amd64.dll
   stacklevel=1)
  * Debugger is active!
  * Debugger PIN: 131-166-024
