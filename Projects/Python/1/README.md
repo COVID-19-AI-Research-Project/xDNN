@@ -84,7 +84,7 @@ cd ..
 Now Download the dataset from this [link](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
 Extract the file and move data to the (./Model/Data/) folder. 
 
-If using linux use the dataset will be saved in the Download folder. Use the following command for unzipping the data and moving to the Data folder. Please note that the terminal directory path should be in the main project location.
+If using linux, the dataset will be saved at the Download folder default. Use the following command for unzipping the data and moving to the Data folder. Please note that the terminal directory path should be in the main project directory.
 
 ```
 sudo unzip ~/Downloads/archive.zip -d ./Model/Data/
