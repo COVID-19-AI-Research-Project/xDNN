@@ -1,0 +1,11 @@
+urllib3
+pandas
+numpy
+matplotlib
+scikit-plot
+scikit-learn
+tensorflow==2.4.0
+Flask
+Werkzeug
+WSGIserver
+gevent

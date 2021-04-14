@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Predicted Class: {{ result.output }}</h1>
+    <hr>
+    <div><img src="{{ result.path_to_image }}" class="img-rounded" width="{{ result.size }}" height="auto"></div>
+    <hr>
+    <a href = "{{ url_for('upload_file') }}" class="btn btn-default">Go Back</a>
+</div>
+{% endblock %}
