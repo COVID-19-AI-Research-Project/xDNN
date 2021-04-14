@@ -145,8 +145,9 @@ Developers from the Github community that would like to contribute to the develo
 ```
 
 The **-b "0.1.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
-
 &nbsp;
+
+### Go to Project Directory path 
 
 Once you have used the command above you will see a directory called **xDNN** in your home directory.
 
