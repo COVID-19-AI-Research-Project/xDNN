@@ -71,7 +71,7 @@ The software required are as follows:
 
 ## Python Installation on Windows OS and MacOS procedure
 
-First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. 
+First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. It is recommended to install python 3.6.5 version. you can download fom the given [link](https://www.python.org/downloads/release/python-365/)
 
 
 ## Python Installation on Linux OS Procedure
@@ -187,6 +187,15 @@ sudo apt update
 sudo apt install python3-dev python3-pip python3-venv
 sudo apt install libatlas-base-dev   
 ```
+
+the other issue to resolve for the tensorflow package in raspberry pi required tensorflow version 2.0.0. 
+Its recommanded to install 
+
+```
+wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.0.0/tensorflow-2.0.0-cp37-none-linux_armv7l.whl
+python3 -m pip install tensorflow-2.0.0-cp37-none-linux_armv7l.whl
+```
+After installation restart the system and activate the environment which the package is installed. 
 
 &nbsp;
 
