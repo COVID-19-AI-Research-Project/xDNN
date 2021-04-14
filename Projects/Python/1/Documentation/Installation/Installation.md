@@ -42,15 +42,6 @@ Basic Computer Configuration:
 3. Harddisk     - 10 GB space
 4. Graphics Card - NVIDIA GTX1050 (Optional)
 
-Edge Device Configuration: 
-
-1. Processor    -  Arm 7 or above 
-2. Ram          -  1 GB or above
-3. Data Space   -  10 GB
-4. Graphic Card - optional 
-
-Note - Please prefer edge device hardware like Raspberry pi 3 B or Raspberry pi 4 B+ and Nvidea Jetson Nano. 
-
 &nbsp;
 
 # Prerequisites 
@@ -65,42 +56,50 @@ The software required are as follows:
 
 &nbsp;
 
-
-
 # Installation 
 
-## Python Installation on Windows OS and MacOS procedure
+### Install python on Windows OS 
 
-First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. It is recommended to install python 3.6.5 version. Download from the given [link](https://www.python.org/downloads/release/python-365/)
+First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. It is recommended to install python 3.6.5 version. Download from the given [link](https://www.python.org/downloads/release/python-365/). While installing the python software tick the `Add Python 3.6 to the path` option and click on install now. The python will take sometime to install. After installation restart the operating system and open command prompt . To verify the python is install in the system use the following command.
 
+```
+python --version
+```
 
-## Python Installation on Linux OS Procedure
+### Install python on Linux OS
 
 Install the python IDE using the following command in the terminal. 
+
 ```
 $ sudo apt install python3.6
 ```
+
 While installing python the terminal will ask the permission to download file. Press 'y' for yes and the command will proceed with the downloading and installing file in system. 
 
-## Python Virtual Environment
+### Python Virtual Environment
+
+Install the virtual environment package for creating a environment for the project and avoiding libraies issue on the base or other project environment. To install the package follow the given command:
 
 ```
 python -m pip install --user virtualenv
 ```
 
 Create a new environment for Python 3.6.5 as by default the python IDE has python 3.8.0 installed default. 
-For windows OS
+In windows OS use the following command:
 
 ```
 python -m venv py365 python=3.6.5
 ```
-for linux OS
+
+for linux OS use the following command:
 
 ```
 python3 -m venv py365 python=3.6.5
 ```
+
 This will create python environment with the version 3.6.5. 
-For windows use this command for the activating the virtual environment in command prompt. 
+
+For windows use the following command for the activating the virtual environment in command prompt. 
 
 ```
 ./py365/bin/activate
@@ -111,15 +110,17 @@ For windows use this command for the activating the virtual environment in comma
 $ source py365/bin/activate
 ```
 
-Linux Install System File 
+Additional Linux Install System File 
 
 Compiling a package from source code requires additional software.
 
 Enter the following to install the required packages for Python:
+
 ```
 $ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
 ```
-Upgrading pip package
+
+Upgrading pip package for installing the latest packages in the python environment. Use the following command:
 
 ```
 python3 -m pip install --upgrade pip
@@ -136,32 +137,6 @@ To clone the repository and install this project, make sure you have Git install
   $ git clone https://github.com/COVID-19-AI-Research-Project/xDNN.git
 ```
 
-Once you have used the command above you will see a directory called **xDNN** in your home directory.
-
-For linux OS use the following command
-```
-ls
-```
-
-For Windows OS use the following command
-```
-dir
-```
-
-Using the ls or dir command in your home directory should show you the following directory files.
-
-Now navigate the download file which is saved in the home directory file using the following command. 
-
-```
-cd xDNN
-```
-
-Go to the project path 
-
-```
-cd Projects/Python/1
-```
-
 ### Developer Forks
 Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
 
@@ -173,29 +148,54 @@ The **-b "0.1.0"** parameter ensures you get the code from the latest master bra
 
 &nbsp;
 
+Once you have used the command above you will see a directory called **xDNN** in your home directory.
 
-Go to the root directory of the main project file and install the dependencies using the following command in the prompt. 
+For Windows prompt use the following command
+```
+dir
+```
+
+For linux terminal use the following command
+```
+ls
+```
+
+Using the ls or dir command in your home directory should show you the following directory files.
+
+Now navigate the download file which is saved in the home directory file using the following command. 
+
+```
+cd xDNN
+```
+
+Go to the project path using the following command:
+
+```
+cd Projects/Python/1
+```
+
+The dependency are required for the executing code therefore its recommended to install the following packages or else use the text script for downloading packages in python. 
+
+```
+pip(3) install urllib3
+pip(3) install pandas
+pip(3) install numpy
+pip(3) install matplotlib
+pip(3) install scikit-plot
+pip(3) install scikit-learn
+pip(3) install tensorflow==2.4.0
+pip(3) install Flask
+pip(3) install Werkzeug
+pip(3) install WSGIserver
+pip(3) install gevent
+```
+
+If like to install the packages from the text file then Go to the root directory of the main project file and install the dependencies using the following command in the prompt. 
 ```
 pip3 install -r requirements.txt
 ```
 It will ask rights for installing the libaries. Just type Y and enter when asked. This will take some time to install the dependencies as it may consume more data depending on the file. 
-
-For Edge Device use the following command for resolving issue on the numpy only for the linux OS. 
-
-```
-sudo apt update
-sudo apt install python3-dev python3-pip python3-venv
-sudo apt install libatlas-base-dev   
-```
-
-the other issue to resolve for the tensorflow package in raspberry pi required tensorflow version 2.0.0. 
-Its recommanded to install 
-
-```
-wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.0.0/tensorflow-2.0.0-cp37-none-linux_armv7l.whl
-python3 -m pip install tensorflow-2.0.0-cp37-none-linux_armv7l.whl
-```
-After installation restart the system and activate the environment which the package is installed. 
+ 
 
 &nbsp;
 
