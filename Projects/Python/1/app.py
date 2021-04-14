@@ -89,8 +89,8 @@ def classify_image(out_fe):
     
     # Load the files, including features, images and labels.    
 
-    X_train_file_path = r'./Model/features/data_df_X_train_lite.csv'
-    y_train_file_path = r'./Model/features/data_df_y_train_lite.csv'
+    X_train_file_path = r'./Model/Features/data_df_X_train_lite.csv'
+    y_train_file_path = r'./Model/Features/data_df_y_train_lite.csv'
 
     X_train = genfromtxt(X_train_file_path, delimiter=',')
     y_train = pd.read_csv(y_train_file_path, delimiter=';',header=None)
