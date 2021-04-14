@@ -71,14 +71,14 @@ The software required are as follows:
 
 ## Python Installation on Windows OS and MacOS procedure
 
-First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. It is recommended to install python 3.6.5 version. you can download fom the given [link](https://www.python.org/downloads/release/python-365/)
+First install the [Python IDE](https://www.python.org/downloads/) and navigate to the command prompt. It is recommended to install python 3.6.5 version. Download from the given [link](https://www.python.org/downloads/release/python-365/)
 
 
 ## Python Installation on Linux OS Procedure
 
 Install the python IDE using the following command in the terminal. 
 ```
-sudo apt install python3.6
+$ sudo apt install python3.6
 ```
 While installing python the terminal will ask the permission to download file. Press 'y' for yes and the command will proceed with the downloading and installing file in system. 
 
@@ -106,9 +106,9 @@ For windows use this command for the activating the virtual environment in comma
 ./py365/bin/activate
 ```
 
- For Liux use this command in the terminal: 
+ For Linux use this command in the terminal: 
 ```
-source py365/bin/activate
+$ source py365/bin/activate
 ```
 
 Linux Install System File 
@@ -117,7 +117,7 @@ Compiling a package from source code requires additional software.
 
 Enter the following to install the required packages for Python:
 ```
-sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+$ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
 ```
 Upgrading pip package
 

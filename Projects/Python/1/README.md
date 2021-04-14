@@ -63,10 +63,28 @@ Please follow the [Installation Guide](../1/Documentation/Installation/Installat
 
 # Download Dataset 
 
-Download the dataset from this [link](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
-Extract the file and paste it in the (./Model/Data/) folder. 
+Create a Folder for Dataset to extract. First navigate to the [Model](./Model) folder. 
 
-if using linux use the dataset will be saved in the Download folder. Use the following command for unzipping the data and moving to the project file. Please note that the terminal directory path should be in the main project location.
+```
+cd Model
+```
+
+Create Data folder using the following command. 
+
+```
+mkdir Data
+```
+
+After the Folder is created then navigate back to the project directory path using the following command. 
+
+```
+cd ..
+```
+
+Now Download the dataset from this [link](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
+Extract the file and move data to the (./Model/Data/) folder. 
+
+If using linux use the dataset will be saved in the Download folder. Use the following command for unzipping the data and moving to the Data folder. Please note that the terminal directory path should be in the main project location.
 
 ```
 sudo unzip ~/Downloads/archive.zip -d ./Model/Data/
@@ -78,10 +96,10 @@ In this techniques, we need to process the data for training and testing model.
 Execute the file [Feature_Extraction_VGG16.py](./Classes/Feature_Extraction_VGG16.py) for data processing and feature extraction from the data file. 
 
 ```
-python3 ./Classes/Feature_Extraction_VGG16.py
+python(3) ./Classes/Feature_Extraction_VGG16.py
 ```
 
-This will take time to download the VGG16 file and process for converting into the train and test features with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
+This will take time to download the VGG16 Model file and process for converting data file into the train and test features with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
 
 We will be using [VGG16 Model](https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py) for extracting features and data points. 
 
@@ -156,14 +174,14 @@ The extracted features will be shown like this
 
 # Training Model 
 
-Open Python IDE or Anaconda IDE (Command prompt or spyder) and navigate to the project root directory and execute the following command:
+In the Command prompt navigate to the project root directory and execute the following command:
 
-run the following command
 ```
 python(3) main.py
 ```
 
 The extracted features are further process in the xDNN model for the training purpose. 
+
 ```
 ###################### Data Loaded ######################
 Data Shape:
@@ -184,7 +202,7 @@ Further the results are shown on the Readme file.
 
 ## Training Results
 
-The trained model is processed in the workspace of the python IDE, this contains a Model file which is trained on 1737 images containing xDNN Parameters.
+The trained model is processed on data features extracted from the VGG16 Model and further the data peaks are , this contains a Model file which is trained on 1737 images containing xDNN Parameters.
  When the training finishes the model will show the results related to metrics and figures of merit.
 
 ```
