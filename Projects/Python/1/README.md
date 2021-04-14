@@ -332,9 +332,10 @@ The Web Page will provide a predict button to classify the image from the server
 
 ![WebPage3](../1/Media/Project_Images/webpage_predict.png)
 
-After Sometime it will give results for the uploaded Image as shown:
+The classifier takes time for processing the image and classifying the result as shown:
 
 ![WebPage4](../1/Media/Project_Images/webpage_covid.png)
+
 
 &nbsp;
 
