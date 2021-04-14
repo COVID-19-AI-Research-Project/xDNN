@@ -44,7 +44,7 @@ Centre Director @ [Lira](https://www.lancaster.ac.uk/lira/), & his researcher,
 These data have been collected from real patients in hospitals from Sao Paulo, Brazil.
 
 The aim of this dataset is to encourage the research and development of artificial intelligent methods which are able to identify if a person is is infected by SARS-CoV-2 through the analysis of his/her CT scans.
-As baseline result for this dataset we used an eXplainable Deep Learning approach (xDNN) which we could achieve an F1 score of **0.9672** which is very promising.
+As baseline result for this dataset we used an eXplainable Deep Learning approach (xDNN) which we could achieve an F1 score of **0.9678** which is very promising.
 
 &nbsp;
 
