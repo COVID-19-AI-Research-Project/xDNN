@@ -50,7 +50,7 @@ The required operating system can be Windows, Linux or MacOS.
 
 The software required are as follows:
 1. [Python IDE](https://www.python.org/)
-2. [Tensorflow Library](https://www.tensorflow.org/install/pip)
+2. [Tensorflow Library 2.4.0](https://www.tensorflow.org/install/pip)
 3. [PyTorch Libary](https://pytorch.org/) (Optional)
 4. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
@@ -141,10 +141,10 @@ To clone the repository and install this project, make sure you have Git install
 Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
 
 ```
-  $ git clone -b "0.1.0" https://github.com/COVID-19-AI-Research-Project/xDNN.git
+  $ git clone -b "0.2.0" https://github.com/COVID-19-AI-Research-Project/xDNN.git
 ```
 
-The **-b "0.1.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
+The **-b "0.2.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
 
 &nbsp;
 
@@ -195,11 +195,7 @@ pip(3) install WSGIserver
 pip(3) install gevent
 ```
 
-If like to install the packages from the text file then Go to the root directory of the main project file and install the dependencies using the following command in the prompt. 
-```
-pip(3) install -r requirements.txt
-```
-It will ask rights for installing the libaries. Just type Y and enter when asked. This will take some time to install the dependencies as it may consume more data depending on the file. 
+ This will take some time to install the dependencies as it may consume more data depending on the file. 
  
 &nbsp;
 
