@@ -211,36 +211,36 @@ Results:
 
 Accuracy =
 
-   0.969325
+    0.975460
 
 
 precision =
 
-    0.969325
+    0.975460
 
 
 recall =
 
-    0.969325
+    0.975460
 
 
 F1 =
 
-    0.969325
+    0.975460
 
 
 Cohens kappa =
 
-    0.938579
+    0.950867
 
 
 Confusion_Matrix =
 
-   247     2
-    13   227
+   248     1
+    11   229
 ```
 
-![Accuracy](../1/Media/Images/Accuracy_chart.png)
+![Accuracy](../1/Media/Images/accuracy.png)
 
 _Fig 1. Accuracy_
 
@@ -256,18 +256,18 @@ _Fig 3. Confusion Matrix_
 
 | Accuracy  | Recall     | Precision  | AUC/ROC   |
 | --------- | ---------- | ---------- | --------- |
-| 0.969325  |  0.969325    | 0.969325     | 0.938579    |
+| 0.975460  |  0.975460   | 0.975460     | 0.950867    |
 
 ### Figures Of Merit
 
 | Figures of merit     | Amount/Value      | Percentage  |
 | -------------------- | ------------------| ------------|
-| True Positives       | 247               | 99.196787% |
-| False Positives      | 2                 | 00.803213%  |
-| True Negatives       | 227               | 94.583333% |
-| False Negatives      | 13                | 05.416667%  |
-| Misclassification    | 15                | 06.21988%  |
-| Sensitivity / Recall | 0.969325            | 96.93%         |
+| True Positives       | 248               | 99.598394% |
+| False Positives      | 1                 | 00.401606%  |
+| True Negatives       | 229               | 95.416667% |
+| False Negatives      | 11                | 04.583333%  |
+| Misclassification    | 12                | 04.984939%  |
+| Sensitivity / Recall | 0.975425            | 97.54%         |
 
 ## Training on your own Dataset
 
