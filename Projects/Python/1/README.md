@@ -72,7 +72,7 @@ cd Model
 Create Data and Sample folder using the following command. 
 
 ```
-mkdir Data, Sample
+mkdir Data
 ```
 
 After the Folder is created then navigate back to the project directory path using the following command. 
