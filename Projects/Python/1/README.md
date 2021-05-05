@@ -69,10 +69,10 @@ Create a Folder for Dataset to extract. First navigate to the [Model](./Model) f
 cd Model
 ```
 
-Create Data folder using the following command. 
+Create Data and Sample folder using the following command. 
 
 ```
-mkdir Data
+mkdir Data, Sample
 ```
 
 After the Folder is created then navigate back to the project directory path using the following command. 
@@ -287,6 +287,18 @@ It will provide COVID or normal results with the prediction accurate score on th
 python(3) classifier.py
 ```
 
+The outcome represents as per the following note
+
+```
+###################### Results ##########################
+
+Result Time:  0.14 seconds
+Input Image: Covid (1).png
+Result: COVID
+Prediction 9.957084049494994e-09
+
+```
+
 # Real World Testing
 
 For testing the model and getting the results on random CT Scan Images, we will upload an Image on a webpage for the given default IP Address and
@@ -336,6 +348,14 @@ The classifier takes time for processing the image and classifying the result as
 
 ![WebPage4](../1/Media/Project_Images/webpage_covid.png)
 
+In the command prompt or terminal, the result will shown as follows: 
+
+```
+COVID19 Detected  Prediction: 9.957084049494994e-09
+127.0.0.1 - - [Date/Month/year xx:xx:xx] "←[37mPOST /predict HTTP/1.1←[0m" 200 -
+
+```
+The images can be selected multiple time and the classified results shown in least time.
 
 &nbsp;
 
