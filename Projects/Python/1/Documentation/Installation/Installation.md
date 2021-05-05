@@ -110,6 +110,8 @@ For windows use the following command for the activating the virtual environment
 $ source py365/bin/activate
 ```
 
+If still face any issue can find more information on creating virtual environment refer to the offical [link](https://docs.python.org/3.6/library/venv.html)
+
 Additional Linux Install System File 
 
 Compiling a package from source code requires additional software.
