@@ -90,6 +90,8 @@ If using linux, the dataset will be saved at the Download folder default. Use th
 sudo unzip ~/Downloads/archive.zip -d ./Model/Data/
 ```
 
+After the data is extracted cut any 10 images from both class and paste in the [Sample](./Model/Sample) Folder. This will be used for the unique image test to actual classification in the real world case scenerio. 
+
 # Data Pre-processing 
 
 In this techniques, we need to process the data for training and testing model. 
@@ -185,17 +187,13 @@ The extracted features are further process in the xDNN model for the training pu
 ```
 ###################### Data Loaded ######################
 Data Shape:
-X train:  (1984, 4096)
-Y train:  (1984, 2)
-X test:  (497, 4096)
-Y test:  (497, 2)
-```
+X train:  (1952, 4096)
+Y train:  (1952, 2)
+X test:  (489, 4096)
+Y test:  (489, 2)
 
-The model takes less time compared to the ordinary model training procedure. 
-
-```
 ###################### Model Trained ####################
-Time:  52.63 seconds
+Time:  62.56 seconds
 ```
 
 Further the results are shown on the Readme file. 
@@ -206,38 +204,40 @@ The trained model is processed on data features extracted from the VGG16 Model a
  When the training finishes the model will show the results related to metrics and figures of merit.
 
 ```
-Elapsed time is 68.74 seconds.
+###################### Results ##########################
+
+Elapsed time is 66.74 seconds.
 Results:
 
 Accuracy =
 
-   0.967807
+   0.969325
 
 
 precision =
 
-    0.967807
+    0.969325
 
 
 recall =
 
-    0.967807
+    0.969325
 
 
 F1 =
 
-    0.967807
+    0.969325
 
 
-AUC =
+Cohens kappa =
 
-    0.935607
+    0.938579
 
 
 Confusion_Matrix =
 
    247     2
-    14   234
+    13   227
 ```
 
 ![Accuracy](../1/Media/Images/Accuracy_chart.png)
@@ -256,18 +256,18 @@ _Fig 3. Confusion Matrix_
 
 | Accuracy  | Recall     | Precision  | AUC/ROC   |
 | --------- | ---------- | ---------- | --------- |
-| 0.967807  |  0.967807    | 0.967807     | 0.935607    |
+| 0.969325  |  0.969325    | 0.969325     | 0.938579    |
 
 ### Figures Of Merit
 
 | Figures of merit     | Amount/Value      | Percentage  |
 | -------------------- | ------------------| ------------|
-| True Positives       | 247               | 67.65892% |
-| False Positives      | 2                 | 0.398699%  |
-| True Negatives       | 234               | 63.97529% |
-| False Negatives      | 14                | 1.179623%  |
-| Misclassification    | 12                | 1.345706%  |
-| Sensitivity / Recall | 0.9894            | 98%         |
+| True Positives       | 247               | 99.196787% |
+| False Positives      | 2                 | 00.803213%  |
+| True Negatives       | 227               | 94.583333% |
+| False Negatives      | 13                | 05.416667%  |
+| Misclassification    | 15                | 06.21988%  |
+| Sensitivity / Recall | 0.969325            | 96.93%         |
 
 ## Training on your own Dataset
 

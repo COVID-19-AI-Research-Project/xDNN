@@ -18,12 +18,15 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.models import Model
 import numpy as np
+import time
 import os
 
 import pandas as pd
+import logging
+logging.getLogger('tensorflow').disabled = True
 
-from Classes.src.xDNN_class import *
-from Classes.src.xDNN_class import xDNN
+from Classes.xDNN_class import *
+from Classes.xDNN_class import xDNN
 from numpy import genfromtxt
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
@@ -44,12 +47,18 @@ y_train_file_path = r'./Model/Features/data_df_y_train_lite.csv'
 X_train = genfromtxt(X_train_file_path, delimiter=',')
 y_train = pd.read_csv(y_train_file_path, delimiter=';',header=None)
 
+print ("###################### Data Loaded ######################")
+print("Data Shape:   ")
+print("X train: ",X_train.shape)
+print("Y train: ",y_train.shape)
+
 pd_y_train_labels = y_train[1]
 pd_y_train_images = y_train[0]
 
 # Convert Pandas to Numpy
 y_train_labels = pd_y_train_labels.to_numpy()
 y_train_images = pd_y_train_images.to_numpy()
+
 
 # Model Learning
 Input1 = {}
@@ -60,14 +69,24 @@ Input1['Labels'] = y_train_labels
 
 Mode1 = 'Learning'
 
+start = time.time()
 Output1 = xDNN(Input1,Mode1)
+
+end = time.time()
+
+print ("###################### Model Trained ####################")
+
+print("Time: ",round(end - start,2), "seconds")
 
 #sLoad VGG-16 model
 model = VGG16(weights='imagenet', include_top= True )
 layer_name = 'fc2'
 intermediate_layer_model = keras.Model(inputs=model.input,outputs=model.get_layer(layer_name).output)
 
-img = image.load_img(('./static/uploads/test.png'), target_size=(224, 224))
+print ("###################### Results ##########################")
+
+input_image = ('./Model/Sample/<enter the image name>')
+img = image.load_img(input_image, target_size=(224, 224))
 
 def ext_feature(img):
     x = image.img_to_array(img)
@@ -86,14 +105,21 @@ Input3['xDNNParms'] = Output1['xDNNParms']
 Input3['Features'] = out_fe
 Mode3 = 'classify'
 
+startTest = time.time()
 Output3 = xDNN(Input3,Mode3)
+
+endTest = time.time()
 
 out1 = Output3['Scores'][0][0]
 out2 = Output3['Scores'][0][1]
 
+print("Result Time: ", round(endTest - startTest,2), "seconds")
+
+print('Input Image:', os.path.basename(input_image))
+
 if out1 > out2:
-    print('COVID')
+    print('Result: COVID')
     print('Prediction',out1)
 else:
-    print('Normal')
+    print('Result: Normal')
     print('Prediction',out2)

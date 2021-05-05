@@ -8,7 +8,7 @@
 # Title:         Predict CT Scan on Web Page
 # Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
 # License:       MIT License
-# Last Modified: 2021-04-12
+# Last Modified: 2021-05-03
 #
 ############################################################################################
 
@@ -19,6 +19,8 @@ import glob
 import re
 import numpy as np
 import pandas as pd
+import logging
+logging.getLogger('tensorflow').disabled = True
 
 #from app import app
 import urllib.request
@@ -34,8 +36,8 @@ from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.models import Model
 
 # src 
-from Classes.src.xDNN_class import *
-from Classes.src.xDNN_class import xDNN
+from Classes.xDNN_class import *
+from Classes.xDNN_class import xDNN
 from numpy import genfromtxt
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
@@ -49,7 +51,7 @@ import matplotlib.pyplot as plt
 
 #######################################################################################################################
 app = Flask(__name__)
-app.secret_key = ('7LQl_lAfBQMjT4rkNMrV3g')
+app.secret_key = ('enter secret key')
 
 global image 
 global model

@@ -8,14 +8,14 @@
 # Title:         Predict CT Scan on Web Page
 # Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
 # License:       MIT License
-# Last Modified: 2021-04-13
+# Last Modified: 2021-05-03
 #
 ############################################################################################
 
 import pandas as pd
 
-from Classes.src.xDNN_class import *
-from Classes.src.xDNN_class import xDNN
+from Classes.xDNN_class import *
+from Classes.xDNN_class import xDNN
 from numpy import genfromtxt
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
@@ -126,8 +126,10 @@ print('Cohens kappa: %f' % kappa)
 
 # confusion matrix
 matrix = confusion_matrix(y_test_labels , Output2['EstLabs'])
-print("Confusion Matrix: ",matrix)
+print("Class Confusion Matrix: ",matrix)
 
+per_matrix = matrix.astype('float') / matrix.sum(axis=1)[:, np.newaxis]
+print("Normalized Confusion Matrix: ",per_matrix)
 # Plot the graphs 
 
 # Pie chart, where the slices will be ordered and plotted counter-clockwise:
@@ -149,10 +151,11 @@ ax = fig2.add_axes([0,0,1,1])
 name = ['precision', 'Recall', 'F1 score']
 values = [precision,recall,f1]
 ax.bar(name,values)
+plt.title('Precision - Recall - F1')
 plt.show()
 
 # Confusion Matrix 
-#confusion matrix
 fig3 = plt.figure()
 skplt.metrics.plot_confusion_matrix(y_test_labels , Output2['EstLabs'], normalize=True)
+plt.title('Confusion Matrix')
 plt.show()
