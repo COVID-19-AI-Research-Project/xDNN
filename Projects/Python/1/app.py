@@ -31,8 +31,8 @@ from tensorflow.keras.preprocessing import image
 
 #import libraries
 from tensorflow import keras
-from tensorflow.keras.applications.vgg16 import VGG16
-from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.applications.vgg19 import VGG19
+from tensorflow.keras.applications.vgg19 import preprocess_input
 from tensorflow.keras.models import Model
 
 # src 
@@ -57,6 +57,30 @@ global image
 global model
 global intermediate_layer_model
 
+    
+X_train_file_path = r'./Model/Features/data_df_X_train_lite.csv'
+y_train_file_path = r'./Model/Features/data_df_y_train_lite.csv'
+
+X_train = genfromtxt(X_train_file_path, delimiter=',')
+y_train = pd.read_csv(y_train_file_path, delimiter=';',header=None)
+
+pd_y_train_labels = y_train[1]
+pd_y_train_images = y_train[0]
+
+# Convert Pandas to Numpy
+y_train_labels = pd_y_train_labels.to_numpy()
+y_train_images = pd_y_train_images.to_numpy()
+
+# Model Learning
+Input1 = {}
+    
+Input1['Images'] = y_train_images
+Input1['Features'] = X_train
+Input1['Labels'] = y_train_labels
+        
+Mode1 = 'Learning'
+Output1 = xDNN(Input1, Mode1)
+
 
 def model_predict(img_path, model):
     img = image.load_img(img_path, target_size=(224, 224))
@@ -72,11 +96,11 @@ def ext_feature(img_path):
     #del test
     #del features
     from tensorflow.keras.preprocessing import image 
-    img = image.load_img(img_path, target_size=(224, 224))
+    img = image.load_img(img_path, target_size=(224, 224), color_mode='rgb')
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     x = preprocess_input(x)
-    model = VGG16(weights='imagenet', include_top= True )
+    model = VGG19(weights='imagenet', include_top= True )
     layer_name = 'fc2'
     intermediate_layer_model = keras.Model(inputs=model.input,outputs=model.get_layer(layer_name).output)
     features = intermediate_layer_model.predict(x)
@@ -90,31 +114,6 @@ def ext_feature(img_path):
 def classify_image(out_fe):
     
     # Load the files, including features, images and labels.    
-
-    X_train_file_path = r'./Model/Features/data_df_X_train_lite.csv'
-    y_train_file_path = r'./Model/Features/data_df_y_train_lite.csv'
-
-    X_train = genfromtxt(X_train_file_path, delimiter=',')
-    y_train = pd.read_csv(y_train_file_path, delimiter=';',header=None)
-
-    pd_y_train_labels = y_train[1]
-    pd_y_train_images = y_train[0]
-
-    # Convert Pandas to Numpy
-    y_train_labels = pd_y_train_labels.to_numpy()
-    y_train_images = pd_y_train_images.to_numpy()
-
-    # Model Learning
-    Input1 = {}
-
-    Input1['Images'] = y_train_images
-    Input1['Features'] = X_train
-    Input1['Labels'] = y_train_labels
-    
-    Mode1 = 'Learning'
-
-    Output1 = xDNN(Input1,Mode1)
-    
     Input3 = {}
     Input3['xDNNParms'] = Output1['xDNNParms']
     Input3['Features'] = out_fe

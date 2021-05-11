@@ -8,14 +8,14 @@
 # Title:         Predict CT Scan on Web Page
 # Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
 # License:       MIT License
-# Last Modified: 2021-04-07
+# Last Modified: 2021-05-11
 #
 ############################################################################################
 
 from tensorflow import keras
-from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.applications.vgg19 import VGG19
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.applications.vgg19 import preprocess_input
 from tensorflow.keras.models import Model
 import numpy as np
 import time
@@ -38,6 +38,19 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_curve, auc
 import matplotlib.pyplot as plt
 
+
+# Extract Features
+
+def ext_feature(img):
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x = preprocess_input(x)
+    features = intermediate_layer_model.predict(x)
+    test = []
+    test.append(features[0])
+    np_feature = np.array(test)
+    
+    return np_feature
 
 # Load the files, including features, images and labels.    
 
@@ -79,47 +92,43 @@ print ("###################### Model Trained ####################")
 print("Time: ",round(end - start,2), "seconds")
 
 #sLoad VGG-16 model
-model = VGG16(weights='imagenet', include_top= True )
+model = VGG19(weights='imagenet', include_top= True )
 layer_name = 'fc2'
 intermediate_layer_model = keras.Model(inputs=model.input,outputs=model.get_layer(layer_name).output)
 
 print ("###################### Results ##########################")
 
-input_image = ('./Model/Sample/<enter the image name>')
-img = image.load_img(input_image, target_size=(224, 224))
+input_dir = ('./Model/Sample/')
 
-def ext_feature(img):
-    x = image.img_to_array(img)
-    x = np.expand_dims(x, axis=0)
-    x = preprocess_input(x)
-    features = intermediate_layer_model.predict(x)
-    test = []
-    test.append(features[0])
-    np_feature = np.array(test)
+count = 0
+for img_name in os.listdir(input_dir):
+    input_image = os.path.join(input_dir, img_name)
+    count = count + 1
+    img = image.load_img(input_image, target_size=(224, 224), color_mode='rgb')
     
-    return np_feature
+    out_fe = ext_feature(img)
+    Input3 = {}
+    Input3['xDNNParms'] = Output1['xDNNParms']
+    Input3['Features'] = out_fe
+    Mode3 = 'classify'
+    
+    print(" ")
+    print('Test Image No: %2d' % int(count))
+    startTest = time.time()
+    Output3 = xDNN(Input3,Mode3)
 
-out_fe = ext_feature(img)
-Input3 = {}
-Input3['xDNNParms'] = Output1['xDNNParms']
-Input3['Features'] = out_fe
-Mode3 = 'classify'
+    endTest = time.time()
 
-startTest = time.time()
-Output3 = xDNN(Input3,Mode3)
+    out1 = Output3['Scores'][0][0]
+    out2 = Output3['Scores'][0][1]
 
-endTest = time.time()
+    print("Result Time: ", round(endTest - startTest,2), "seconds")
 
-out1 = Output3['Scores'][0][0]
-out2 = Output3['Scores'][0][1]
+    print('Input Image:', os.path.basename(input_image))
 
-print("Result Time: ", round(endTest - startTest,2), "seconds")
-
-print('Input Image:', os.path.basename(input_image))
-
-if out1 > out2:
-    print('Result: COVID')
-    print('Prediction',out1)
-else:
-    print('Result: Normal')
-    print('Prediction',out2)
+    if out1 > out2:
+        print('Result: COVID')
+        print('Prediction',out1)
+    else:
+        print('Result: Normal')
+        print('Prediction',out2)

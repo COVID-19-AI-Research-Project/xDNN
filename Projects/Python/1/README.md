@@ -63,31 +63,13 @@ Please follow the [Installation Guide](../1/Documentation/Installation/Installat
 
 # Download Dataset 
 
-Create a Folder for Dataset to extract. First navigate to the [Model](./Model) folder. 
-
-```
-cd Model
-```
-
-Create Data and Sample folder using the following command. 
-
-```
-mkdir Data
-```
-
-After the Folder is created then navigate back to the project directory path using the following command. 
-
-```
-cd ..
-```
-
-Now Download the dataset from this [link](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
+Download the dataset from this [link](https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset)
 Extract the file and move data to the (./Model/Data/) folder. 
 
 If using linux, the dataset will be saved at the Download folder default. Use the following command for unzipping the data and moving to the Data folder. Please note that the terminal directory path should be in the main project directory.
 
 ```
-sudo unzip ~/Downloads/archive.zip -d ./Model/Data/
+unzip ~/Downloads/archive.zip -d ./Model/Data/
 ```
 
 After the data is extracted cut any 10 images from both class and paste in the [Sample](./Model/Sample) Folder. This will be used for the unique image test to actual classification in the real world case scenerio. 
@@ -95,67 +77,73 @@ After the data is extracted cut any 10 images from both class and paste in the [
 # Data Pre-processing 
 
 In this techniques, we need to process the data for training and testing model. 
-Execute the file [Feature_Extraction_VGG16.py](./Classes/Feature_Extraction_VGG16.py) for data processing and feature extraction from the data file. 
+Execute the file [Feature_Extraction_VGG19.py](./Classes/Feature_Extraction_VGG19.py) for data processing and feature extraction from the data file. 
 
 ```
-python(3) ./Classes/Feature_Extraction_VGG16.py
+python(3) ./Classes/Feature_Extraction_VGG19.py
 ```
 
-This will take time to download the VGG16 Model file and process for converting data file into the train and test features with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
+This will take time to download the VGG19 Model file and process for converting data file into the train and test features with the respect to the label and feature data in the csv format. This will be saved at (./Model/Features/) folder. 
 
-We will be using [VGG16 Model](https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py) for extracting features and data points. 
+We will be using [VGG19 Model](https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg19.py) for extracting features and data points. 
 
 ```
 Model: "model"
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #
+Layer (type)                 Output Shape              Param #   
 =================================================================
-input_1 (InputLayer)         [(None, 224, 224, 3)]     0
+input_1 (InputLayer)         [(None, 224, 224, 3)]     0         
 _________________________________________________________________
-block1_conv1 (Conv2D)        (None, 224, 224, 64)      1792
+block1_conv1 (Conv2D)        (None, 224, 224, 64)      1792      
 _________________________________________________________________
-block1_conv2 (Conv2D)        (None, 224, 224, 64)      36928
+block1_conv2 (Conv2D)        (None, 224, 224, 64)      36928     
 _________________________________________________________________
-block1_pool (MaxPooling2D)   (None, 112, 112, 64)      0
+block1_pool (MaxPooling2D)   (None, 112, 112, 64)      0         
 _________________________________________________________________
-block2_conv1 (Conv2D)        (None, 112, 112, 128)     73856
+block2_conv1 (Conv2D)        (None, 112, 112, 128)     73856     
 _________________________________________________________________
-block2_conv2 (Conv2D)        (None, 112, 112, 128)     147584
+block2_conv2 (Conv2D)        (None, 112, 112, 128)     147584    
 _________________________________________________________________
-block2_pool (MaxPooling2D)   (None, 56, 56, 128)       0
+block2_pool (MaxPooling2D)   (None, 56, 56, 128)       0         
 _________________________________________________________________
-block3_conv1 (Conv2D)        (None, 56, 56, 256)       295168
+block3_conv1 (Conv2D)        (None, 56, 56, 256)       295168    
 _________________________________________________________________
-block3_conv2 (Conv2D)        (None, 56, 56, 256)       590080
+block3_conv2 (Conv2D)        (None, 56, 56, 256)       590080    
 _________________________________________________________________
-block3_conv3 (Conv2D)        (None, 56, 56, 256)       590080
+block3_conv3 (Conv2D)        (None, 56, 56, 256)       590080    
 _________________________________________________________________
-block3_pool (MaxPooling2D)   (None, 28, 28, 256)       0
+block3_conv4 (Conv2D)        (None, 56, 56, 256)       590080    
 _________________________________________________________________
-block4_conv1 (Conv2D)        (None, 28, 28, 512)       1180160
+block3_pool (MaxPooling2D)   (None, 28, 28, 256)       0         
 _________________________________________________________________
-block4_conv2 (Conv2D)        (None, 28, 28, 512)       2359808
+block4_conv1 (Conv2D)        (None, 28, 28, 512)       1180160   
 _________________________________________________________________
-block4_conv3 (Conv2D)        (None, 28, 28, 512)       2359808
+block4_conv2 (Conv2D)        (None, 28, 28, 512)       2359808   
 _________________________________________________________________
-block4_pool (MaxPooling2D)   (None, 14, 14, 512)       0
+block4_conv3 (Conv2D)        (None, 28, 28, 512)       2359808   
 _________________________________________________________________
-block5_conv1 (Conv2D)        (None, 14, 14, 512)       2359808
+block4_conv4 (Conv2D)        (None, 28, 28, 512)       2359808   
 _________________________________________________________________
-block5_conv2 (Conv2D)        (None, 14, 14, 512)       2359808
+block4_pool (MaxPooling2D)   (None, 14, 14, 512)       0         
 _________________________________________________________________
-block5_conv3 (Conv2D)        (None, 14, 14, 512)       2359808
+block5_conv1 (Conv2D)        (None, 14, 14, 512)       2359808   
 _________________________________________________________________
-block5_pool (MaxPooling2D)   (None, 7, 7, 512)         0
+block5_conv2 (Conv2D)        (None, 14, 14, 512)       2359808   
 _________________________________________________________________
-flatten (Flatten)            (None, 25088)             0
+block5_conv3 (Conv2D)        (None, 14, 14, 512)       2359808   
 _________________________________________________________________
-fc1 (Dense)                  (None, 4096)              102764544
+block5_conv4 (Conv2D)        (None, 14, 14, 512)       2359808   
 _________________________________________________________________
-fc2 (Dense)                  (None, 4096)              16781312
+block5_pool (MaxPooling2D)   (None, 7, 7, 512)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 25088)             0         
+_________________________________________________________________
+fc1 (Dense)                  (None, 4096)              102764544 
+_________________________________________________________________
+fc2 (Dense)                  (None, 4096)              16781312  
 =================================================================
-Total params: 134,260,544
-Trainable params: 134,260,544
+Total params: 139,570,240
+Trainable params: 139,570,240
 Non-trainable params: 0
 _________________________________________________________________
 ```
@@ -193,51 +181,51 @@ X test:  (489, 4096)
 Y test:  (489, 2)
 
 ###################### Model Trained ####################
-Time:  62.56 seconds
+Time:  59.88 seconds
 ```
 
 Further the results are shown on the Readme file. 
 
 ## Training Results
 
-The trained model is processed on data features extracted from the VGG16 Model and further the data peaks are , this contains a Model file which is trained on 1737 images containing xDNN Parameters.
+The trained model is processed on data features extracted from the VGG19 Model and further the data peaks are , this contains a Model file which is trained on 1737 images containing xDNN Parameters.
  When the training finishes the model will show the results related to metrics and figures of merit.
 
 ```
 ###################### Results ##########################
 
-Elapsed time is 66.74 seconds.
+Elapsed time is 76.35 seconds.
 Results:
 
 Accuracy =
 
-    0.975460
+    0.948875
 
 
 precision =
 
-    0.975460
+    0.948875
 
 
 recall =
 
-    0.975460
+    0.948875
 
 
 F1 =
 
-    0.975460
+    0.948875
 
 
 Cohens kappa =
 
-    0.950867
+    0.897631
 
 
 Confusion_Matrix =
 
-   248     1
-    11   229
+   242     7
+    18   222
 ```
 
 ![Accuracy](../1/Media/Images/accuracy.png)
@@ -256,22 +244,22 @@ _Fig 3. Confusion Matrix_
 
 | Accuracy  | Recall     | Precision  | AUC/ROC   |
 | --------- | ---------- | ---------- | --------- |
-| 0.975460  |  0.975460   | 0.975460     | 0.950867    |
+| 0.948875  |  0.948875   | 0.948875     | 0.897631    |
 
 ### Figures Of Merit
 
 | Figures of merit     | Amount/Value      | Percentage  |
 | -------------------- | ------------------| ------------|
-| True Positives       | 248               | 99.598394% |
-| False Positives      | 1                 | 00.401606%  |
-| True Negatives       | 229               | 95.416667% |
-| False Negatives      | 11                | 04.583333%  |
-| Misclassification    | 12                | 04.984939%  |
-| Sensitivity / Recall | 0.975425            | 97.54%         |
+| True Positives       | 242               | 97.188755% |
+| False Positives      | 7                 | 02.811245%  |
+| True Negatives       | 222               | 92.5% |
+| False Negatives      | 18                | 0.75%  |
+| Misclassification    | 25                | 03.561245%  |
+| Sensitivity / Recall | 0.975425            | 94.8875%         |
 
 ## Training on your own Dataset
 
-The Python file [Feature_Extraction_VGG16.py](./Classes/Feature_Extraction_VGG16.py) can be used to make the dataloader and Features extracted in csv files for training
+The Python file [Feature_Extraction_VGG19.py](./Classes/Feature_Extraction_VGG19.py) can be used to make the dataloader and Features extracted in csv files for training
 on your own dataset. Before running the above script, paste the dataset folder with containing subfolders in the project root directory. After running
 the above script save the generated Train and Test files in [**data**](./Model/Data) and features files of data_df_X_train_lite, data_df_y_train_lite, data_df_X_test_lite, data_df_y_test_lite in
 [**Features**](./Model/Features) Folder.
@@ -287,15 +275,130 @@ It will provide COVID or normal results with the prediction accurate score on th
 python(3) classifier.py
 ```
 
-The outcome represents as per the following note
+The outcome represents as per the following note for the 20 images taken from the dataset.
 
 ```
 ###################### Results ##########################
 
-Result Time:  0.14 seconds
-Input Image: Covid (1).png
+Test Image No:  1
+Result Time:  0.16 seconds
+Input Image: Covid (1128).png
 Result: COVID
-Prediction 9.957084049494994e-09
+Prediction 2.3157990878014566e-07
+
+Test Image No:  2
+Result Time:  0.16 seconds
+Input Image: Covid (1183).png
+Result: COVID
+Prediction 2.2107056325673018e-05
+
+Test Image No:  3
+Result Time:  0.16 seconds
+Input Image: Covid (1239).png
+Result: COVID
+Prediction 3.289864228419524e-06
+
+Test Image No:  4
+Result Time:  0.16 seconds
+Input Image: Covid (329).png
+Result: COVID
+Prediction 8.557165519555034e-11
+
+Test Image No:  5
+Result Time:  0.16 seconds
+Input Image: Covid (371).png
+Result: COVID
+Prediction 3.2005508469191144e-07
+
+Test Image No:  6
+Result Time:  0.16 seconds
+Input Image: Covid (55).png
+Result: COVID
+Prediction 1.6259068607291937e-08
+
+Test Image No:  7
+Result Time:  0.16 seconds
+Input Image: Covid (552).png
+Result: COVID
+Prediction 2.808031585807088e-06
+
+Test Image No:  8
+Result Time:  0.16 seconds
+Input Image: Covid (7).png
+Result: COVID
+Prediction 2.4256743989621184e-09
+
+Test Image No:  9
+Result Time:  0.16 seconds
+Input Image: Covid (842).png
+Result: COVID
+Prediction 1.743352625277348e-08
+
+Test Image No: 10
+Result Time:  0.16 seconds
+Input Image: Covid (89).png
+Result: COVID
+Prediction 1.9026769542235203e-09
+
+Test Image No: 11
+Result Time:  0.16 seconds
+Input Image: Non-Covid (1114).png
+Result: Normal
+Prediction 1.7233890800844494e-08
+
+Test Image No: 12
+Result Time:  0.15 seconds
+Input Image: Non-Covid (1164).png
+Result: Normal
+Prediction 5.259532027758053e-07
+
+Test Image No: 13
+Result Time:  0.16 seconds
+Input Image: Non-Covid (1205).png
+Result: Normal
+Prediction 1.4284225118513272e-10
+
+Test Image No: 14
+Result Time:  0.16 seconds
+Input Image: Non-Covid (217).png
+Result: Normal
+Prediction 2.205919318894609e-08
+
+Test Image No: 15
+Result Time:  0.16 seconds
+Input Image: Non-Covid (457).png
+Result: Normal
+Prediction 0.002346745917211865
+
+Test Image No: 16
+Result Time:  0.15 seconds
+Input Image: Non-Covid (56).png
+Result: Normal
+Prediction 1.1180274342962551e-12
+
+Test Image No: 17
+Result Time:  0.16 seconds
+Input Image: Non-Covid (6).png
+Result: Normal
+Prediction 6.333217652770396e-09
+
+Test Image No: 18
+Result Time:  0.16 seconds
+Input Image: Non-Covid (715).png
+Result: Normal
+Prediction 2.2802423621668964e-16
+
+Test Image No: 19
+Result Time:  0.16 seconds
+Input Image: Non-Covid (822).png
+Result: Normal
+Prediction 1.6466359747235423e-14
+
+Test Image No: 20
+Result Time:  0.16 seconds
+Input Image: Non-Covid (955).png
+Result: Normal
+Prediction 7.532766377654571e-05
 
 ```
 
@@ -312,7 +415,7 @@ To test an Image, navigate to the project root(../xDNN/Projects/Python/1/) and e
 python(3) app.py
 ```
 
-The Script will start running and initiate with the Flask API.
+If using localhost IP address (127.0.0.1) using for other purpose you can change the address and port and run the script. The Script will start running and initiate with the Flask API.
 
 ```
  * Serving Flask app "app" (lazy loading)
