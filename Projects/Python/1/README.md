@@ -227,8 +227,9 @@ Confusion_Matrix =
    242     7
     18   222
 
-The figures will popup on screen with the each results outcome and saved in the [Image](./Media/Images/) folder.
 ```
+The figures will popup on screen with the each results outcome and saved in the [Image](./Media/Images/) folder.
+
 ![Accuracy](../1/Media/Images/accuracy.png)
 
 _Fig 1. Accuracy_
