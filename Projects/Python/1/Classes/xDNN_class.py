@@ -8,7 +8,7 @@
 # Title:         Predict CT Scan on Web Page
 # Description:   Analyze the CT Scan images and predict whether they are COVID-19 or normal Scans by using Pretrained Model on a Web Page
 # License:       MIT License
-# Last Modified: 2021-04-07
+# Last Modified: 2021-05-12
 #
 ############################################################################################
 
