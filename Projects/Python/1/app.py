@@ -56,7 +56,6 @@ app.secret_key = ('enter secret key')
 global image 
 global model
 global intermediate_layer_model
-
     
 X_train_file_path = r'./Model/Features/data_df_X_train_lite.csv'
 y_train_file_path = r'./Model/Features/data_df_y_train_lite.csv'
@@ -80,7 +79,6 @@ Input1['Labels'] = y_train_labels
         
 Mode1 = 'Learning'
 Output1 = xDNN(Input1, Mode1)
-
 
 def model_predict(img_path, model):
     img = image.load_img(img_path, target_size=(224, 224))
@@ -171,6 +169,6 @@ def upload():
     
 
 if __name__ == '__main__':
-      app.run(debug=True)
+      app.run(host='127.0.0.1', debug=True)
       print()
       

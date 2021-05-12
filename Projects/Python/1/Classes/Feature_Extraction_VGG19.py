@@ -21,6 +21,11 @@ from tensorflow.keras.models import Model
 import numpy as np
 import os
 
+def listdir_nohidden(path):
+    for f in os.listdir(path):
+        if not f.startswith('.'):
+            yield f
+
 #Load VGG-16 model
 model = VGG19(weights='imagenet', include_top= True )
 layer_name = 'fc2'
@@ -31,7 +36,9 @@ intermediate_layer_model.summary()
 
 #Load the data directory  where the images are stored
 data_dir = './Model/Data/'
-contents = os.listdir(data_dir)
+pro_data = listdir_nohidden(data_dir)
+contents = pro_data
+
 classes = [each for each in contents if os.path.isdir(data_dir + each)]
 #Each folder becomes a different class
 

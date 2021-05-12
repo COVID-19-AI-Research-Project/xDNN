@@ -20,6 +20,7 @@ from tensorflow.keras.models import Model
 import numpy as np
 import time
 import os
+import glob
 
 import pandas as pd
 import logging
@@ -98,11 +99,12 @@ intermediate_layer_model = keras.Model(inputs=model.input,outputs=model.get_laye
 
 print ("###################### Results ##########################")
 
-input_dir = ('./Model/Sample/')
+input_dir = ('./Model/Sample/*.png')
 
 count = 0
-for img_name in os.listdir(input_dir):
-    input_image = os.path.join(input_dir, img_name)
+
+for img_name in glob.glob(input_dir):
+    input_image = os.path.join(img_name)
     count = count + 1
     img = image.load_img(input_image, target_size=(224, 224), color_mode='rgb')
     

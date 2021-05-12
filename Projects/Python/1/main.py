@@ -130,32 +130,37 @@ print("Class Confusion Matrix: ",matrix)
 
 per_matrix = matrix.astype('float') / matrix.sum(axis=1)[:, np.newaxis]
 print("Normalized Confusion Matrix: ",per_matrix)
-# Plot the graphs 
 
-# Pie chart, where the slices will be ordered and plotted counter-clockwise:
-labels = 'COVID', 'Non-COVID'
-inaccurate = 1 - accuracy 
+#Plot the graphs 
+ #=============================================================================
+ # Pie chart, where the slices will be ordered and plotted counter-clockwise:
+labels = ['COVID', 'Non-COVID']
+inaccurate = (1 - accuracy)
 sizes = [accuracy, inaccurate]
 explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
-
+ 
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
-        shadow=True, startangle=90)
+         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-plt.show()
-
-# Recall, Precision and F1
-import matplotlib.pyplot as plt
-fig2 = plt.figure()
-ax = fig2.add_axes([0,0,1,1])
+ax1.set_title('Accuracy Chart');
+fig1.savefig('./Media/Images/Accuracy_chart.png')
+ 
+# Recall, Precision and F1 
+fig2, ax2 = plt.subplots()
+ax2 = fig2.add_axes([0,0,1,1])
 name = ['precision', 'Recall', 'F1 score']
 values = [precision,recall,f1]
-ax.bar(name,values)
-plt.title('Precision - Recall - F1')
-plt.show()
-
-# Confusion Matrix 
+ax2.bar(name,values)
+ax2.set_title('Precision - Recall - F1')
+plt.savefig('./Media/Images/recall.png', bbox_inches='tight')
+ 
 fig3 = plt.figure()
-skplt.metrics.plot_confusion_matrix(y_test_labels , Output2['EstLabs'], normalize=True)
-plt.title('Confusion Matrix')
-plt.show()
+con_mat = skplt.metrics.plot_confusion_matrix(
+    y_test_labels, 
+    Output2['EstLabs'],
+    figsize=(8,8))
+plt.savefig('./Media/Images/Confusion_matrix.png')
+plt.show(con_mat)
+
+# =============================================================================
