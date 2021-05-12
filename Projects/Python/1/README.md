@@ -283,123 +283,123 @@ The outcome represents as per the following note for the 20 images taken from th
 
 Test Image No:  1
 Result Time:  0.16 seconds
-Input Image: Covid (1128).png
+Input Image: Covid (1060).png
 Result: COVID
-Prediction 2.3157990878014566e-07
+Prediction 0.031588138091213795
 
 Test Image No:  2
-Result Time:  0.16 seconds
-Input Image: Covid (1183).png
+Result Time:  0.15 seconds
+Input Image: Covid (119).png
 Result: COVID
-Prediction 2.2107056325673018e-05
+Prediction 1.9993806885388816e-09
 
 Test Image No:  3
 Result Time:  0.16 seconds
-Input Image: Covid (1239).png
-Result: COVID
-Prediction 3.289864228419524e-06
+Input Image: Covid (1226).png
+Result: Normal
+Prediction 1.5732839015365827e-09
 
 Test Image No:  4
-Result Time:  0.16 seconds
-Input Image: Covid (329).png
+Result Time:  0.15 seconds
+Input Image: Covid (2).png
 Result: COVID
-Prediction 8.557165519555034e-11
+Prediction 6.70681162432005e-12
 
 Test Image No:  5
 Result Time:  0.16 seconds
-Input Image: Covid (371).png
+Input Image: Covid (232).png
 Result: COVID
-Prediction 3.2005508469191144e-07
+Prediction 6.962768279421297e-09
 
 Test Image No:  6
-Result Time:  0.16 seconds
+Result Time:  0.15 seconds
+Input Image: Covid (294).png
+Result: COVID
+Prediction 9.952293710441506e-15
+
+Test Image No:  7
+Result Time:  0.15 seconds
+Input Image: Covid (445).png
+Result: COVID
+Prediction 1.1249652679479841e-08
+
+Test Image No:  8
+Result Time:  0.15 seconds
 Input Image: Covid (55).png
 Result: COVID
 Prediction 1.6259068607291937e-08
 
-Test Image No:  7
-Result Time:  0.16 seconds
-Input Image: Covid (552).png
-Result: COVID
-Prediction 2.808031585807088e-06
-
-Test Image No:  8
-Result Time:  0.16 seconds
-Input Image: Covid (7).png
-Result: COVID
-Prediction 2.4256743989621184e-09
-
 Test Image No:  9
-Result Time:  0.16 seconds
-Input Image: Covid (842).png
+Result Time:  0.17 seconds
+Input Image: Covid (680).png
 Result: COVID
-Prediction 1.743352625277348e-08
+Prediction 1.29845402431108e-06
 
 Test Image No: 10
-Result Time:  0.16 seconds
-Input Image: Covid (89).png
+Result Time:  0.15 seconds
+Input Image: Covid (862).png
 Result: COVID
-Prediction 1.9026769542235203e-09
+Prediction 4.352890743507003e-06
 
 Test Image No: 11
-Result Time:  0.16 seconds
-Input Image: Non-Covid (1114).png
+Result Time:  0.15 seconds
+Input Image: Non-Covid (1036).png
 Result: Normal
-Prediction 1.7233890800844494e-08
+Prediction 0.001772926232429088
 
 Test Image No: 12
 Result Time:  0.15 seconds
-Input Image: Non-Covid (1164).png
+Input Image: Non-Covid (1167).png
 Result: Normal
-Prediction 5.259532027758053e-07
+Prediction 8.162991045344149e-06
 
 Test Image No: 13
 Result Time:  0.16 seconds
-Input Image: Non-Covid (1205).png
+Input Image: Non-Covid (1211).png
 Result: Normal
-Prediction 1.4284225118513272e-10
+Prediction 0.0002029218211931952
 
 Test Image No: 14
 Result Time:  0.16 seconds
-Input Image: Non-Covid (217).png
+Input Image: Non-Covid (13).png
 Result: Normal
-Prediction 2.205919318894609e-08
+Prediction 6.747919985455099e-11
 
 Test Image No: 15
 Result Time:  0.16 seconds
-Input Image: Non-Covid (457).png
+Input Image: Non-Covid (271).png
 Result: Normal
-Prediction 0.002346745917211865
+Prediction 0.00010900308786931037
 
 Test Image No: 16
 Result Time:  0.15 seconds
-Input Image: Non-Covid (56).png
+Input Image: Non-Covid (309).png
 Result: Normal
-Prediction 1.1180274342962551e-12
+Prediction 0.0015956689206031993
 
 Test Image No: 17
-Result Time:  0.16 seconds
-Input Image: Non-Covid (6).png
+Result Time:  0.15 seconds
+Input Image: Non-Covid (587).png
 Result: Normal
-Prediction 6.333217652770396e-09
+Prediction 6.708945273342042e-05
 
 Test Image No: 18
 Result Time:  0.16 seconds
-Input Image: Non-Covid (715).png
+Input Image: Non-Covid (69).png
 Result: Normal
-Prediction 2.2802423621668964e-16
+Prediction 4.500791479748551e-13
 
 Test Image No: 19
-Result Time:  0.16 seconds
-Input Image: Non-Covid (822).png
-Result: Normal
-Prediction 1.6466359747235423e-14
+Result Time:  0.17 seconds
+Input Image: Non-Covid (768).png
+Result: COVID
+Prediction 7.071275297244958e-13
 
 Test Image No: 20
 Result Time:  0.16 seconds
-Input Image: Non-Covid (955).png
+Input Image: Non-Covid (871).png
 Result: Normal
-Prediction 7.532766377654571e-05
+Prediction 1.6469236398851145e-05
 
 ```
 
