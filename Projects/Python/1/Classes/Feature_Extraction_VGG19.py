@@ -21,6 +21,8 @@ from tensorflow.keras.models import Model
 import numpy as np
 import os
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 def listdir_nohidden(path):
     for f in os.listdir(path):
         if not f.startswith('.'):
@@ -37,7 +39,8 @@ intermediate_layer_model.summary()
 #Load the data directory  where the images are stored
 data_dir = './Model/Data/'
 pro_data = listdir_nohidden(data_dir)
-contents = pro_data
+contents = list(pro_data)
+contents.sort()
 
 classes = [each for each in contents if os.path.isdir(data_dir + each)]
 #Each folder becomes a different class

@@ -68,10 +68,13 @@ python --version
 
 ### Install python on Linux OS
 
-Install the python IDE using the following command in the terminal. 
+Install the python IDE using the following command in the terminal. The ppa works with the charm on the ubuntu OS.
 
 ```
-$ sudo apt install python3.6
+$ sudo apt-get install software-properties-common
+$ sudo add-apt respository ppa:deadsnakes.ppa
+$ sudo apt-get update
+$ sudo apt-get install python3.6
 ```
 
 While installing python the terminal will ask the permission to download file. Press 'y' for yes and the command will proceed with the downloading and installing file in system. 
@@ -81,7 +84,8 @@ While installing python the terminal will ask the permission to download file. P
 Install the virtual environment package for creating a environment for the project and avoiding libraies issue on the base or other project environment. To install the package follow the given command:
 
 ```
-python -m pip install --user virtualenv
+sudo apt-get install python3-venv
+python(3) -m pip install --user virtualenv
 ```
 
 Create a new environment for Python 3.6.5 as by default the python IDE has python 3.8.0 installed default. 
@@ -94,7 +98,7 @@ python -m venv py365 python=3.6.5
 for linux OS use the following command:
 
 ```
-$ python(3) -m venv py365 python=3.6.5
+$ python(3.6) -m venv py365
 ```
 
 This will create python environment with the version 3.6.5. 
