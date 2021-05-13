@@ -147,10 +147,10 @@ To clone the repository and install this project, make sure you have Git install
 Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
 
 ```
-  $ git clone -b "0.2.0" https://github.com/COVID-19-AI-Research-Project/xDNN.git
+  $ git clone -b "1.1.0" https://github.com/COVID-19-AI-Research-Project/xDNN.git
 ```
 
-The **-b "0.2.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
+The **-b "1.1.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
 
 &nbsp;
 
